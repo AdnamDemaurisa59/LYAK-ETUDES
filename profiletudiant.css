@@ -1,0 +1,333 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #395C9F;
+    padding: 5px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+header a {
+    text-decoration: none;
+}
+
+section {
+    margin-left: 30px; 
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    margin-right: 20px; /* Ajoute un espacement à droite pour chaque lien (ajustez selon vos besoins) */
+    font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white; 
+}
+
+ /* Style pour la liste déroulante */
+ nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Masquer la liste déroulante par défaut */
+    position: absolute;
+    background-color: black;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li:hover ul {
+    display: block; /* Afficher la liste déroulante au survol */
+}
+
+nav ul li {
+    display: block;
+}
+
+nav ul a {
+    padding: 10px;
+    display: block;
+}
+
+header h1 {
+    margin: 15px;
+    color: #fff;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;    
+    border-radius: 10px;
+    border-radius: 3em;
+}
+
+.search-bar input {
+    border-radius: 5px 0 0 5px;
+    border:solid 2px #fff;
+    box-sizing:border-box;
+
+    transition:all 2s ease-in;
+    width:200px;
+    height: 30px;
+}
+
+.search-bar button {
+    color: black;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    width: 150px;
+
+    border:solid 2px #3e5e80;
+    border-radius: 5px 0 0 5px;
+    padding:7px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profil-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profil-student {
+    display: flex;
+    align-items: center;
+}
+
+.img-student img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profil1 h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.profil1 p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+button#view-portfolio {
+    padding: 10px 20px;
+    background-color: #0073b1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#view-portfolio:hover {
+    background-color: #005b8b;
+}
+
+.reseau-sociaux {
+    text-align: center;
+}
+
+.reseaux a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.detailsprofil, .education, .competences-study, .experiences-study, .contact-me {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.detailsprofil h2, .education h3, .competences-study h2, .experiences-study h2, .contact-me h3 {
+    margin-top: 0;
+    color: #0073b1;
+}
+
+.detailsprofil {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.detailsprofil a {
+        padding: 10px 20px;
+        background-color: #0073b1;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+}
+
+.detailsprofil a:hover {
+    background-color: #005b8b;
+}
+
+.skills div, .experience {
+    margin-bottom: 15px;
+}
+
+.experience img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.experience h4, .experience p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.experience a {
+    color: #0073b1;
+    text-decoration: none;
+}
+
+.experience a:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover, .close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button[type="button"], button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0073b1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover, button[type="submit"]:hover {
+    background-color: #005b8b;
+}
+
+.contact-me
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {     
+    border-bottom: 2px solid white; 
+}
+
+@media (max-width: 768px) {
+    .profil-user {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-student img {
+        margin: 0 auto 20px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1280px) {
+
+}
+
