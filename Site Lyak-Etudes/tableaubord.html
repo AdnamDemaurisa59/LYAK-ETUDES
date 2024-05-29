@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Tableau de bord</title>
+    <link rel="stylesheet" href="tableaubord.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+        <a href="accueil.html"><h1>LYAK-ETUDES</h1></a>
+        <nav>
+                <li>
+                    <a href="accueil.html">Accueil</a>
+                    <!-- Liste déroulante pour la rubrique Boite à outil -->
+                    <ul>
+                        <li><a href="actualite-entreprise.html">Actualité Marché de l'emploi</a></li>
+                        <li><a href="communaute.html">Communauté</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                        <li><a href="contactez-nous.html">Contactez-nous</a></li>
+                        <li><a href="aproposdenous.html">A propos de nous</a></li>
+                        <li><a href="boiteoutil.html">Boite à Outil</a></li>
+                        <!-- Ajoutez d'autres liens pour la boite à outils -->
+                    </ul>
+                </li>
+                <li>
+                    <a href="stage.html">Stages</a>
+                    <ul>
+                        <li><a href="avis-stages.html">Avis sur les stages</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="alternance.html">Alternances</a>
+                    <ul>
+                        <li><a href="avis-alternance.html">Avis sur les alternances</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="profiletudiant.html">Mon Profil</a>
+                    <ul>
+                        <li><a href="parametresprofil.html">Paramètres Profil</a></li>
+                        <li><a href="mentor.html">Mentor</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="entreprise.html">Entreprise</a>       
+                    <ul>
+                        <li><a href="actualites-entreprises.html">Actualités des entreprises</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a></a></li>
+                    </ul>
+                </li>
+                <div class="logout-button">
+                    <button type="button" onclick="logout()"><i class="fa-solid fa-power-off"></i></button>
+                </div>
+            </nav>
+    </header>
+
+
+    <main>
+        <div class="title">
+            <h1>Bienvenue sur votre tableau de bord</h1>
+            <p>Nous sommes ravis de vous aider à trouver votre prochaine opportunité. Voici un aperçu de vos demandes actuelles :</p>
+        </div>
+
+        <section class="applications">
+            <div class="application-status">
+                <h3>Candidature en cours d'examen</h3>
+                <div class="table">
+                    <div class="row header">
+                        <div class="cell">Poste de Stage</div>
+                        <div class="cell">Poste d'alternance</div>
+                        <div class="cell">Entreprise</div>
+                        <div class="cell">Status</div>
+                        <div class="cell">Dates de Candidature</div>
+                        <div class="cell">Action</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="text" placeholder="Renseigner le poste occupé"></div>
+                        <div class="cell"><input type="text" placeholder="Renseigner le poste occupé"></div>
+                        <div class="cell"><input type="text" placeholder="Renseigner le nom de l'entreprise"></div>
+                        <div class="cell"><span class="status in-progress">En cours d'examen</span></div>
+                        <div class="cell"><input type="date"></div>
+                        <div class="cell"><a href="#">Voir</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-status">
+                <h3>Candidature validée</h3>
+                <div class="table">
+                    <div class="row header">
+                        <div class="cell">Poste de Stage</div>
+                        <div class="cell">Poste d'alternance</div>
+                        <div class="cell">Entreprise</div>
+                        <div class="cell">Status</div>
+                        <div class="cell">Dates de Candidature</div>
+                        <div class="cell">Action</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="text" placeholder="Renseigner le poste occupé"></div>
+                        <div class="cell"><input type="text" placeholder="Renseigner le poste occupé"></div>
+                        <div class="cell"><input type="text" placeholder="Renseigner le nom de l'entreprise"></div>
+                        <div class="cell"><span class="status validated">Candidature Validée</span></div>
+                        <div class="cell"><input type="date"></div>
+                        <div class="cell"><a href="#">Voir</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-status">
+                <h3>Candidature Refusée</h3>
+                <div class="table">
+                    <div class="row header">
+                        <div class="cell">Poste de Stage</div>
+                        <div class="cell">Poste d'alternance</div>
+                        <div class="cell">Entreprise</div>
+                        <div class="cell">Status</div>
+                        <div class="cell">Dates de Candidature</div>
+                        <div class="cell">Action</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="text" placeholder="Renseigner le poste occupé"></div>
+                        <div class="cell"><input type="text" placeholder="Renseigner le poste occupé"></div>
+                        <div class="cell"><input type="text" placeholder="Renseigner le nom de l'entreprise"></div>
+                        <div class="cell"><span class="status refused">Candidature Refusée</span></div>
+                        <div class="cell"><input type="date"></div>
+                        <div class="cell"><a href="#">Voir</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="important-dates">
+            <h3>Dates Importantes</h3>
+            <div>
+                <label>Dates Limite de Candidature<input type="date"></label>
+            </div>
+            <div>
+                <label>Date d'Entretien<input type="date"></label>
+            </div>
+            <div>
+                <label>Date de Décision<input type="date"></label>
+            </div>
+        </section>
+
+        <section class="todo-list">
+            <h3>Liste de Tâches</h3>
+            <div><label><input type="checkbox"> Compléter le CV</label></div>
+            <div><label><input type="checkbox"> Rédiger la Lettre de Motivation</label></div>
+            <div><label><input type="checkbox"> Se Préparer pour les Entretiens</label></div>
+            <div><label><input type="checkbox"> Rechercher les Entreprises</label></div>
+        </section>
+
+        <section class="required-action">
+            <h3>Action Requise</h3>
+            <div>
+                <h4>Complétez votre candidature</h4>
+                <p>Pour augmenter vos chances d'obtenir un entretien, nous vous recommandons fortement de compléter cette question facultative.<a href="#">Compléter</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Gestion du menu déroulant
+            const menuItems = document.querySelectorAll('nav li');
+            menuItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    const submenu = item.querySelector('ul');
+                    if (submenu) {
+                        submenu.style.display = 'block';
+                    }
+                });
+                item.addEventListener('mouseleave', () => {
+                    const submenu = item.querySelector('ul');
+                    if (submenu) {
+                        submenu.style.display = 'none';
+                    }
+                });
+            });
+        
+            // Confirmation de déconnexion
+            const logoutButton = document.querySelector('.logout-button button');
+            if (logoutButton) {
+                logoutButton.addEventListener('click', () => {
+                    const confirmation = confirm('Êtes-vous sûr de vouloir vous déconnecter ?');
+                    if (confirmation) {
+                        logout();
+                    }
+                });
+            }
+        
+            // Interactivité des formulaires (exemple de validation simple)
+            const formInputs = document.querySelectorAll('.table input[type="text"], .table input[type="date"]');
+            formInputs.forEach(input => {
+                input.addEventListener('change', () => {
+                    if (input.value.trim() === '') {
+                        input.style.borderColor = 'red';
+                    } else {
+                        input.style.borderColor = '';
+                    }
+                });
+            });
+        });
+        
+        function logout() {
+            // Logique de déconnexion (par exemple, rediriger vers la page de déconnexion)
+            window.location.href = 'logout.html';
+        }
+        
+    </script>
+
+    <footer>
+        <p> © 2024 LYAK-ETUDES</p>
+        <a href="conditions.html">Conditions d'utilisation &nbsp;</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+    </footer>
+    
+</body>
+</html>

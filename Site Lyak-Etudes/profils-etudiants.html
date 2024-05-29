@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profils des Étudiants</title>
+    <link rel="stylesheet" href="./profils-etudiants.css">
+</head>
+<body>
+
+    <header>
+        <a href="accueil.html"><h1>LYAK-ETUDES</h1></a>
+        <nav>
+            <a href="./offres.html" target="_blank"></a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="students-profiles">
+            <h1>Profils des Étudiants</h1>
+            <div id="profiles-container">
+                <!-- Les profils des étudiants seront injectés ici par JavaScript -->
+            </div>
+        </section>
+
+        <section id="students-profiles">
+            <h1>Profils des Étudiants</h1>
+            <div id="profiles-container">
+                <div class="profile-card">
+                    <img class="" src="https://via.placeholder.com/100" alt="Alice Dupont">
+                    <h2>Alice Dupont</h2>
+                    <p>alice.dupont@example.com</p>
+                    <p>Étudiante en informatique, passionnée par le développement web.</p>
+                    <button class="" id="">Voir le profil</button>
+                </div>
+                <div class="profile-card">
+                    <img class="" src="https://via.placeholder.com/100" alt="Bob Martin">
+                    <h2>Bob Martin</h2>
+                    <p>bob.martin@example.com</p>
+                    <p>Étudiant en design graphique, amateur de photographie.</p>
+                    <button class="" id="">Voir le profil</button>
+
+                </div>
+                <div class="profile-card">
+                    <img class="" src="https://via.placeholder.com/100" alt="Claire Dubois">
+                    <h2>Claire Dubois</h2>
+                    <p>claire.dubois@example.com</p>
+                    <p>Étudiante en marketing digital, intéressée par les médias sociaux.</p>
+                    <button class="" id="">Voir le profil</button>
+                </div>
+                <!-- Ajoutez plus de profils d'étudiants ici... -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 LYAK-ETUDES - Profils des Étudiants</p>
+        <a href="conditions.html">Conditions d'utilisation &nbsp;</a>
+        <a href="confidentialité.html">Politique de confidentialité</a>
+    </footer>
+
+    <script src="">
+        document.addEventListener("DOMContentLoaded", function() {
+            const profilesContainer = document.getElementById('./profiletudiant.html');
+        
+            // Exemple de données des étudiants
+            const studentsProfiles = [
+                {
+                    name: "Alice Dupont",
+                    email: "alice.dupont@example.com",
+                    image: "https://via.placeholder.com/100",
+                    bio: "Étudiante en informatique, passionnée par le développement web."
+                },
+                {
+                    name: "Bob Martin",
+                    email: "bob.martin@example.com",
+                    image: "https://via.placeholder.com/100",
+                    bio: "Étudiant en design graphique, amateur de photographie."
+                },
+                {
+                    name: "Claire Dubois",
+                    email: "claire.dubois@example.com",
+                    image: "https://via.placeholder.com/100",
+                    bio: "Étudiante en marketing digital, intéressée par les médias sociaux."
+                },
+                // Ajoutez plus de profils d'étudiants ici...
+            ];
+        
+            // Générer les cartes de profils
+            studentsProfiles.forEach(profile => {
+                const profileCard = document.createElement('div');
+                profileCard.classList.add('profile-card');
+        
+                profileCard.innerHTML = `
+                    <img src="${profile.image}" alt="${profile.name}">
+                    <h2>${profile.name}</h2>
+                    <p>${profile.email}</p>
+                    <p>${profile.bio}</p>
+                `;
+        
+                profilesContainer.appendChild(profileCard);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+header {
+    background-color: #395C9F;
+    padding: 5px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+header h1 {
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    margin-right: 20px; /* Ajoute un espacement à droite pour chaque lien (ajustez selon vos besoins) */
+    font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white; 
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Styles spécifiques aux sections */
+.infos-notification,
+.infos-abonnement {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.infos-notification h3,
+.infos-abonnement h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.infos-notification div,
+.infos-abonnement div {
+    margin-bottom: 15px;
+}
+
+.infos-notification h4,
+.infos-abonnement h4 {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.infos-notification p,
+.infos-abonnement p {
+    color: #777;
+    line-height: 1.5;
+}
+
+.infos-notification ul,
+.infos-abonnement ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.infos-notification ul li,
+.infos-abonnement ul li {
+    margin-bottom: 5px;
+}
+
+.infos-notification ul li p,
+.infos-abonnement ul li p {
+    color: #777;
+    line-height: 1.5;
+}
+
+
+
+
+
+footer {
+    background-color:  #395C9F;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {     
+    border-bottom: 2px solid white; 
+}
+
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1280px) {
+
+}

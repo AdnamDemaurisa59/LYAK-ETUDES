@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechercher une opportunité</title>
+    <link rel="stylesheet" href="recherche-opportunites.css">
+</head>
+<body>
+
+    <header>
+        <a href="accueil.html"><h1>LYAK-ETUDES</h1></a>
+    </header>
+
+    <main>
+        <section>
+            <div class="title">
+                <h2>Trouver un stage ou une alternance</h2>
+                <p>Découvrer des offres qui vous correspondent</p>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="search-bar" placeholder="Rechercher des stages ou alternances">
+            </div>
+        </section>
+
+        <section class="bycity">
+            <h3>Par ville</h3>
+            <div>
+                <a href="">Paris</a>
+            </div>
+            <div>
+                <a href="">Bordeaux</a>
+            </div>
+            <div>
+                <a href="">Lille</a>
+            </div>
+            <div>
+                <a href="">Lyon</a>
+            </div>
+            <div>
+                <a href="">Montpellier</a>
+            </div>
+            <div>
+                <a href="">Nantes</a>
+            </div>
+            <div>
+                <a href="">Rennes</a>
+            </div>
+            <div>
+                <a href="">Strasbourg</a>
+            </div>
+            <div>
+                <a href="">Toulouse</a>
+            </div>
+            <div>
+                <a href="">Rouen</a>
+            </div>
+        </section>
+
+        <section class="fieldofstudy">
+            <h3>Par domaines d'études</h3>
+            <div>
+                <a href="">Architecture d'intérieur</a>
+            </div>
+            <div>
+                <a href="">Cybersécurité</a>
+            </div>
+            <div>
+                <a href="">Informatique</a>
+            </div>
+            <div>
+                <a href="">Audiovisuel</a>
+            </div>
+            <div>
+                <a href="">Création & Digital Design</a>
+            </div>
+            <div>
+                <a href="">Marketing & Communication</a>
+            </div>
+            <div>
+                <a href="">3D, Animation & Jeux Vidéo</a>
+            </div>
+            <div>
+                <a href="">Tech & Business</a>
+            </div>
+        </section>
+
+        <section class="startdate">
+            <h3>Date de début</h3>
+            <div class="radio" id="label">
+                <label for="maintenant"> <input type="radio" id="maintenant" name="start_date" value="maintenant"> Maintenant</label>
+            </div>
+            <div class="radio">
+                <label for="1_mois"><input type="radio" id="1_mois" name="start_date" value="1_mois"> Dans 1 mois</label>
+            </div>
+            <div class="radio">
+                <label for="2_mois"><input type="radio" id="2_mois" name="start_date" value="2_mois"> Dans 2 mois</label>
+            </div>
+            <div class="radio">
+                <label for="3_mois"><input type="radio" id="3_mois" name="start_date" value="3_mois"> Dans 3 mois</label>
+            </div>
+            <div class="radio">
+                <label for="plus_3_mois"><input type="radio" id="plus_3_mois" name="start_date" value="plus_3_mois"> Dans plus de 3 mois</label>
+            </div>
+        </section>
+
+        <section class="timeofcontract">
+            <h3>Durée du contrat</h3>
+            <div class="radio">
+                <label for="moins_2_mois">
+                    <input type="radio" id="moins_2_mois" name="contract_duration" value="moins_2_mois"> Moins de 2 mois
+                </label>
+            </div>
+            <div class="radio">
+                <label for="2_a_4_mois">
+                    <input type="radio" id="2_a_4_mois" name="contract_duration" value="2_a_4_mois"> 2 à 4 mois
+                </label>
+            </div>
+            <div class="radio">
+                <label for="4_a_6_mois">
+                    <input type="radio" id="4_a_6_mois" name="contract_duration" value="4_a_6_mois"> 4 à 6 mois
+                </label>
+            </div>
+            <div class="radio">
+                <label for="6_a_12_mois">
+                    <input type="radio" id="6_a_12_mois" name="contract_duration" value="6_a_12_mois"> 6 à 12 mois
+                </label>
+            </div>
+            <div class="radio">
+                <label for="plus_12_mois">
+                    <input type="radio" id="plus_12_mois" name="contract_duration" value="plus_12_mois"> Plus de 12 mois
+                </label>
+            </div>
+        </section>
+        
+        <section class="typeofcontract">
+            <h3>Contrat</h3>
+            <div class="radio">
+                <label for="stage">
+                    <input type="radio" id="stage" name="contract_type" value="stage"> Stage
+                </label>
+            </div>
+            <div class="radio">
+                <label for="alternance">
+                    <input type="radio" id="alternance" name="contract_type" value="alternance"> Alternance
+                </label>
+            </div>
+        </section>
+        
+        <section class="diplome">
+            <h3>Diplôme requis</h3>
+            <div class="radio">
+                <label for="bac">
+                    <input type="radio" id="bac" name="required_degree" value="bac"> Bac
+                </label>
+            </div>
+            <div class="radio">
+                <label for="bac_1">
+                    <input type="radio" id="bac_1" name="required_degree" value="bac_1"> Bac+1
+                </label>
+            </div>
+            <div class="radio">
+                <label for="bac_2">
+                    <input type="radio" id="bac_2" name="required_degree" value="bac_2"> Bac+2
+                </label>
+            </div>
+            <div class="radio">
+                <label for="bac_3">
+                    <input type="radio" id="bac_3" name="required_degree" value="bac_3"> Bac+3
+                </label>
+            </div>
+            <div class="radio">
+                <label for="bac_4">
+                    <input type="radio" id="bac_4" name="required_degree" value="bac_4"> Bac+4
+                </label>
+            </div>
+            <div class="radio">
+                <label for="bac_5_plus">
+                    <input type="radio" id="bac_5_plus" name="required_degree" value="bac_5_plus"> Bac+5 et plus
+                </label>
+            </div>
+        </section>
+
+        <br>
+
+        <div class="button">
+            <button onclick="" type="button" id="button">Rechercher</button>
+        </div>
+    </main>
+
+ 
+</body>
+</html>

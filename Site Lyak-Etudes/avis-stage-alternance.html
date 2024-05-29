@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tout les avis des étudiants</title>
+    <link rel="stylesheet" href="avis-stage-alternance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+<body>
+
+    <header>
+        <h1>LYAK-ETUDES</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="accueil.html">Accueil</a>
+                    <ul>
+                        <li><a href="actualite-entreprise.html">Actualité Marché de l'emploi</a></li>
+                        <li><a href="communaute.html">Communauté</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                        <li><a href="contactez-nous.html">Contactez-nous</a></li>
+                        <li><a href="aproposdenous.html">À propos de nous</a></li>
+                        <li><a href="boiteoutil.html">Boite à Outil</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="stage.html">Stages</a>
+                    <ul>
+                        <li><a href="avis-stage-alternance.html">Avis sur les stages</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="alternance.html">Alternances</a>
+                    <ul>
+                        <li><a href="avis-stage-alternance.html">Avis sur les alternances</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="profiletudiant.html">Mon Profil</a>
+                    <ul>
+                        <li><a href="parametresprofil.html">Paramètres Profil</a></li>
+                        <li><a href="tableaubord.html">Tableau de Bord</a></li>
+                        <li><a href="notes-stage.html">Mes notes de stages</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="entreprise.html">Entreprise</a>
+                    <ul>
+                        <li><a href="actualites-entreprises.html">Actualités des entreprises</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button type="button" onclick="logout()">Se déconnecter</button>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <h2>Avis sur les stages et alternances</h2>
+        </div>
+
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="search" id="text" autocomplete="off" aria-autocomplete="list" placeholder="Rechercher une entreprise">
+                <div class="icon-loupe">
+                    <a><i class="fas fa-search" name="search"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <section class="student-opinion">
+            <div>
+                <a href="avis-stage-alternance.html">Tous les avis</a>
+            </div>
+
+            <div>
+                <a href="avis-stage.html">Avis sur les stages</a>
+            </div>
+
+            <div>
+                <a href="avis-alternance.html">Avis sur les alternances</a>
+            </div>
+        </section>
+
+        <section class="company-list">
+            <div>
+                <div class="logo-entreprise">
+                    <a href="profilentreprises.html"><img src="https://static.vecteezy.com/ti/vecteur-libre/p3/13948549-logo-google-sur-fond-blanc-transparent-gratuit-vectoriel.jpg" alt="Logo Google"></a>
+                </div>
+                <div>
+                    <h4>Google</h4>
+                    <a href="avis-etudiant.html">Notes : 4.5 (voir l'avis des étudiants)</a>
+                </div>
+            </div>
+
+            <div>
+                <div class="logo-entreprise">
+                    <a href="profilentreprises.html"><img src="https://www.defontaine-construction.fr/wp-content/uploads/2020/07/facebook-logo-png-transparent-background.png" alt="Logo Facebook"></a>
+                </div>
+                <div>
+                    <h4>Facebook</h4>
+                    <a href="avis-etudiant.html">Notes : 4.5 (voir l'avis des étudiants)</a>
+                </div>
+            </div>
+
+            <div>
+                <div class="logo-entreprise">
+                    <a href="profilentreprises.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/1024px-Amazon_icon.svg.png" alt="Logo Amazon"></a>
+                </div>
+                <div>
+                    <h4>Amazon</h4>
+                    <a href="avis-etudiant.html">Notes : 4.5 (voir l'avis des étudiants)</a>
+                </div>
+            </div>
+
+            <div>
+                <div class="logo-entreprise">
+                    <a href="profilentreprises.html"><img src="https://logo-marque.com/wp-content/uploads/2020/09/Microsoft-Embleme.png" alt="Logo Microsoft"></a>
+                </div>
+                <div>
+                    <h4>Microsoft</h4>
+                    <a href="avis-etudiant.html">Notes : 4.5 (voir l'avis des étudiants)</a>
+                </div>
+            </div>
+
+            <div>
+                <div class="logo-entreprise">
+                    <a href="profilentreprises.html"><img src="https://logos-marques.com/wp-content/uploads/2021/03/apple-embleme.jpg" alt="Logo Apple"></a>
+                </div>
+                <div>
+                    <h4>Apple</h4>
+                    <a href="avis-etudiant.html">Notes : 4.5 (voir l'avis des étudiants)</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <div class="information">
+                <a href="aproposdenous.html">À propos de nous</a>
+            </div>
+
+            <div class="information">
+                <a href="">Nous rejoindre</a>
+                <div class="reseaux">
+                    <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/027/395/710/original/twitter-brand-new-logo-3-d-with-new-x-shaped-graphic-of-the-world-s-most-popular-social-media-free-png.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://e7.pngegg.com/pngimages/726/347/png-clipart-linkedin-linkedin-thumbnail.png" alt="Linkedin"></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p> © 2024 LYAK-ETUDES</p>
+        <a href="conditions.html">Conditions d'utilisation</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+    </footer>
+
+    <script src="">
+        // Fonction pour la recherche
+        function search() {
+            const searchText = document.getElementById("text").value.toLowerCase();
+            const companies = document.querySelectorAll(".company-list div");
+
+            companies.forEach(company => {
+                const companyName = company.querySelector("h4").textContent.toLowerCase();
+
+                if (companyName.includes(searchText)) {
+                    company.style.display = "flex";
+                } else {
+                    company.style.display = "none";
+                }
+            });
+        }
+
+        // Gestion de la déconnexion
+        function logout() {
+            // Ici, vous pouvez ajouter le code pour déconnecter l'utilisateur
+            alert("Vous avez été déconnecté");
+            // Exemple de redirection vers une page de connexion
+            window.location.href = "connexion.html";
+        }
+
+        // Validation du formulaire
+        const form = document.getElementById("form-disponibilite");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Empêcher l'envoi du formulaire pour cet exemple
+
+            if (validateForm()) {
+                // Si le formulaire est valide, vous pouvez soumettre les données à votre serveur ici
+                alert("Formulaire soumis avec succès !");
+            }
+        });
+
+        // Fonction de validation de formulaire (exemple)
+        function validateForm() {
+            // Ici, vous pouvez ajouter la logique de validation du formulaire
+            // Retournez true si le formulaire est valide, sinon false
+            return true;
+        }
+    </script>
+    
+</body>
+</html>

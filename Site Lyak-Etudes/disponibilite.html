@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes disponibilités</title>
+    <link rel="stylesheet" href="disponibilite.css">
+</head>
+<body>
+
+    <header>
+        <h1>LYAK-ETUDES</h1>
+        <nav>
+            <a href="./accueil.html">Accueil</a>
+            <a href="./profiletudiant.html">Mon Profil</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="disponibilite">
+            <div>
+                <h2>Disponibilité, Mobilité et Flexibilité</h2>
+                <p>Indiquez vos disponibilités pour un stage ou une alternance, ainsi que vos préférences géographiques. Vos choix seront visibles par les recruteurs.</p>
+            </div>
+
+            <form action="" method="post" id="availability-form" validate>
+                <section>
+                    <h3>Disponibilité</h3>
+                    <div class="input-group">
+                        <label for="start-date">Date de début souhaitée</label>
+                        <input type="date" name="start-date" id="start-date" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="end-date">Date de fin souhaitée</label>
+                        <input type="date" name="end-date" id="end-date" required>
+                    </div>
+
+                    <div class="select-group">
+                        <label for="availability">Quand êtes-vous disponibles ?</label>
+                        <select id="availability" name="availability">
+                            <option value="">-- Vos disponibilités ?</option>
+                            <option>Maintenant</option>
+                            <option>Dans 1 semaine</option>
+                            <option>Dans 2 semaines</option>
+                            <option>Dans 3 semaines</option>
+                            <option>Dans 4 semaines</option>
+                            <option>Plus de 1 mois</option>
+                        </select>
+                    </div>
+
+                    <div class="select-group">
+                        <label for="duration">Durée du stage ou de l'alternance recherchée</label>
+                        <select id="duration" name="duration">
+                            <option value="">-- Quelle durée ?</option>
+                            <option>1 mois</option>
+                            <option>2 mois</option>
+                            <option>3 mois</option>
+                            <option>4 mois</option>
+                            <option>5 mois</option>
+                            <option>6 mois</option>
+                            <option>Plus de 6 mois</option>
+                        </select>
+                    </div>
+
+                    <div class="checkboxes">
+                        <h4>Quelles sont vos disponibilités dans la semaine ?</h4>
+                        <div class="dayofweek">
+                            <label><input type="checkbox" name="days[]" value="Lundi">Lundi</label>
+                            <label><input type="checkbox" name="days[]" value="Mardi">Mardi</label>
+                            <label><input type="checkbox" name="days[]" value="Mercredi">Mercredi</label>
+                            <label><input type="checkbox" name="days[]" value="Jeudi">Jeudi</label>
+                            <label><input type="checkbox" name="days[]" value="Vendredi">Vendredi</label>
+                            <label><input type="checkbox" name="days[]" value="Samedi">Samedi</label>
+                            <label><input type="checkbox" name="days[]" value="Dimanche">Dimanche</label>
+                        </div>
+                    </div>
+                </section>
+            
+                <section class="mobilite">
+                    <h3>Mobilité géographique</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="mobility" value="Partout">Je suis mobile partout en France</label>
+                    </div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="mobility" value="Region">Je suis mobile que dans une région spécifique</label>
+                        <ul>
+                            <li>
+                                <select id="regions" name="regions" disabled>
+                                    <option value="">-- Préciser la ou les régions</option>
+                                    <!-- Options des régions seront ajoutées dynamiquement via JavaScript -->
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="mobility" value="NonMobile">Je ne suis pas mobile</label>
+                    </div>
+                </section>
+
+                <section class="flexibilite">
+                    <h3>Flexibilité de travail</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="workFlexibility" value="TempsPlein">Temps Plein</label>
+                    </div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="workFlexibility" value="TempsPartiel">Temps Partiel</label>
+                    </div>
+                </section>
+
+                <section class="distanciel">
+                    <h3>Présence en bureau ou à distance</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="workLocation" value="Bureau">Présence en bureau</label>
+                    </div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="workLocation" value="Distanciel">Distanciel</label>
+                    </div>
+                </section>
+
+                <div class="textarea">
+                    <h4>Avez-vous d'autres choses à ajouter ?</h4>
+                    <textarea id="message" name="message" placeholder="Vous pouvez ajouter des commentaires supplémentaires sur vos disponibilités et votre mobilité, vos contraintes spécifiques ou préférences personnelles."></textarea>
+                </div>
+
+                <div class="button">
+                    <button type="submit">Enregistrer</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 LYAK-ETUDES</p>
+        <a href="conditions.html">Conditions d'utilisation</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const regionsSelect = document.getElementById("regions");
+            const mobileRegionRadio = document.querySelector('input[name="mobility"][value="Region"]');
+            const regionsList = document.getElementById("regions-list");
+        
+            mobileRegionRadio.addEventListener("change", function () {
+                if (this.checked) {
+                    regionsSelect.removeAttribute("disabled");
+                    fetchRegions(); // Appeler une fonction pour récupérer les régions depuis une API
+                } else {
+                    regionsSelect.setAttribute("disabled", "");
+                    regionsSelect.value = "";
+                    regionsList.style.display = "none";
+                }
+            });
+        
+            function fetchRegions() {
+                // Vous pouvez remplacer cet exemple d'API par une véritable source de données des régions en France
+                fetch("https://geo.api.gouv.fr/regions")
+                    .then(response => response.json())
+                    .then(data => {
+                        regionsSelect.innerHTML = "<option value=''>-- Préciser la ou les régions</option>";
+                        data.forEach(region => {
+                            const option = document.createElement("option");
+                            option.value = region.code; // Utilisez l'identifiant ou le code de la région selon les données fournies par l'API
+                            option.textContent = region.nom;
+                            regionsSelect.appendChild(option);
+                        });
+                        regionsList.style.display = "block";
+                    })
+                    .catch(error => console.error("Erreur lors de la récupération des régions :", error));
+            }
+        
+            // Validation du formulaire
+            const form = document.getElementById("availability-form");
+        
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Empêcher l'envoi du formulaire pour cet exemple
+        
+                if (validateForm()) {
+                    // Si le formulaire est valide, vous pouvez soumettre les données à votre serveur ici
+                    console.log("Formulaire valide !");
+                } else {
+                    console.log("Formulaire invalide !");
+                }
+            });
+        
+            function validateForm() {
+                let isValid = true;
+        
+                // Vérifier si au moins une case de la semaine est cochée
+                const daysCheckboxes = document.querySelectorAll('input[name="days[]"]:checked');
+                if (daysCheckboxes.length === 0) {
+                    isValid = false;
+                    alert("Veuillez sélectionner au moins un jour de la semaine.");
+                }
+        
+                // Vérifier si une option de mobilité est sélectionnée
+                const mobilityRadios = document.querySelectorAll('input[name="mobility"]:checked');
+                if (mobilityRadios.length === 0) {
+                    isValid = false;
+                    alert("Veuillez sélectionner une option de mobilité géographique.");
+                } else if (mobilityRadios[0].value === "Region" && regionsSelect.value === "") {
+                    isValid = false;
+                    alert("Veuillez sélectionner au moins une région.");
+                }
+        
+                // Vérifier si une option de flexibilité de travail est sélectionnée
+                const workFlexibilityRadios = document.querySelectorAll('input[name="workFlexibility"]:checked');
+                if (workFlexibilityRadios.length === 0) {
+                    isValid = false;
+                    alert("Veuillez sélectionner une option de flexibilité de travail.");
+                }
+        
+                // Vérifier si une option de présence en bureau ou à distance est sélectionnée
+                const workLocationRadios = document.querySelectorAll('input[name="workLocation"]:checked');
+                if (workLocationRadios.length === 0) {
+                    isValid = false;
+                    alert("Veuillez sélectionner une option de présence en bureau ou à distance.");
+                }
+        
+                return isValid;
+            }
+        });
+    </script>
+    
+</body>
+</html>

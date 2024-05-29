@@ -1,0 +1,185 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #395C9F;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form textarea {
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 5px;
+    height: 150px;
+    width: 100%;
+    resize: none;
+}
+
+.disponibilite, .mobilite, .flexibilite, .distanciel {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.disponibilite h2, .mobilite h3, .flexibilite h3, .distanciel h3 {
+    color: #395C9F;
+}
+
+.disponibilite p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.input-group, .select-group, .checkboxes, .radio-group, .textarea {
+    margin-bottom: 15px;
+}
+
+.input-group label, .select-group label, .radio-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input, .select-group select, .textarea textarea {
+    width: calc(100% - 30px);
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.select-group select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E") no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px auto;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 5px 30px 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+}
+
+.select-group select:hover,
+.select-group select:focus {
+    background-color: #f0f0f0;
+    outline: none;
+}
+
+.select-group select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .select-group select {
+        width: 100%;
+    }
+}
+
+.select-group select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E") no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px auto;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 5px 30px 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+}
+
+.select-group select:hover,
+.select-group select:focus {
+    background-color: #f0f0f0;
+    outline: none;
+}
+
+.select-group select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .select-group select {
+        width: 100%;
+    }
+}
+
+button[type="button"], button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0073b1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover, button[type="submit"]:hover {
+    background-color: #005b8b;
+}
+
+footer {
+    background-color:  #395C9F;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {     
+    border-bottom: 2px solid white; 
+}

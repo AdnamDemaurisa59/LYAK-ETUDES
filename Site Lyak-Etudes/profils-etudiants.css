@@ -1,0 +1,105 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #395C9F;
+    padding: 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+header nav a:hover {     
+    border-bottom: 2px solid white; 
+}
+
+main {
+    padding: 20px;
+}
+
+#students-profiles {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#students-profiles h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#profiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.profile-card h2 {
+    margin: 15px 0 5px;
+    font-size: 1.2em;
+}
+
+.profile-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #395C9F;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {     
+    border-bottom: 2px solid white; 
+}

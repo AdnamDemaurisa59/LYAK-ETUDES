@@ -1,0 +1,499 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f3;
+    color: #333;
+}
+
+header {
+    background-color: #395C9F;
+    padding: 5px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+header a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    margin-right: 20px; /* Ajoute un espacement à droite pour chaque lien (ajustez selon vos besoins) */
+    font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white; 
+    
+}
+
+ /* Style pour la liste déroulante */
+ nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Masquer la liste déroulante par défaut */
+    position: absolute;
+    background-color: black;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+
+}
+
+nav li:hover ul {
+    display: block; /* Afficher la liste déroulante au survol */
+}
+
+nav ul li {
+    display: block;
+}
+
+nav ul a {
+    padding: 10px;
+    display: block;
+}
+
+header h1 {
+    margin: 15px;
+    color: #fff;
+}
+
+
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.presentationsite {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.img-title img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.intro {
+    max-width: 500px;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.explication p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.icon-loupe {
+    padding: 10px;
+    background-color:  #395c9f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.youlooking {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.youlooking h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.youlooking-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.option {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+
+.option i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #395c9f;
+}
+
+.option h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.option p {
+    font-size: 1rem;
+}
+
+.featured-domain {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.featured-domain h2 {
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+}
+
+.featured-domain-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.domain-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.domain-item:hover {
+    transform: scale(1.05);
+}
+
+.domain-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.domain-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.domain-item i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #395c9f;
+}
+
+.find-offer {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.find-offer h2 {
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+}
+
+.find-offer-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.find-offer-list div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.find-offer-list div:hover {
+    transform: scale(1.05);
+}
+
+.find-offer-list a {
+    text-decoration: none;
+    color: #000;
+}
+
+.free-training {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.free-training h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.training-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.training {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.training:hover {
+    transform: scale(1.05);
+}
+
+.training img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.training a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.profile-group {
+    background-color: #f9f9f9; /* Couleur de fond douce */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px; /* Bordures arrondies */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    text-align: center; /* Centrer le contenu */
+}
+
+/* Titre de la section */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Couleur de texte foncée */
+    margin-bottom: 20px;
+}
+
+/* Bouton pour découvrir d'autres profils */
+.discover-profiles-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Couleur de fond bleue */
+    color: #fff; /* Couleur de texte blanche */
+    text-decoration: none;
+    border-radius: 4px; /* Bordures arrondies */
+    transition: background-color 0.3s ease;
+}
+
+.discover-profiles-btn:hover {
+    background-color: #0056b3; /* Couleur de fond plus foncée au survol */
+}
+
+/* Liste des profils */
+.profile-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Élément individuel de profil */
+.profile-item {
+    background-color: #fff; /* Fond blanc */
+    border-radius: 8px; /* Bordures arrondies */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+    padding: 15px;
+    width: 200px;
+    text-align: center; /* Centrer le contenu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-item:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre portée plus marquée */
+}
+
+/* Image du profil */
+.img-profile img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Image ronde */
+    margin-bottom: 10px;
+}
+
+/* Nom de l'étudiant */
+.profile-name {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Couleur de texte foncée */
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.profile-name:hover {
+    color: #007BFF; /* Couleur bleue au survol */
+}
+
+/* Métier recherché */
+.profile-job {
+    display: block;
+    font-size: 16px;
+    color: #555; /* Couleur de texte légèrement foncée */
+    text-decoration: none;
+}
+
+.profile-job:hover {
+    color: #007BFF; /* Couleur bleue au survol */
+}
+
+/* Ajustements supplémentaires pour rendre l'interface plus fluide */
+@media (max-width: 768px) {
+    .profile-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-item {
+        width: 90%;
+    }
+}
+
+
+.testimonials {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials h2 {
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.student-info img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.student-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.student-course {
+    font-size: 1rem;
+    color: #666;
+}
+
+.find-offer-list img  {
+    width: 200px;
+    height: 200px;
+    padding: 1px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+
+footer {
+    background-color:  #395C9F;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {     
+    border-bottom: 2px solid white; 
+}
+
+

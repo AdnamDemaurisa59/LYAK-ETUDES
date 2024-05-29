@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres Profil</title>
+    <link rel="stylesheet" href="parametresprofil.css">
+</head>
+<body>
+
+    <header>
+        <a href="./accueil.html"><h1>LYAK-ETUDES</h1></a>
+        <nav>
+            <a href="./profiletudiant.html">Mon Profil</a>
+            <a href="./gestion-moncompte.html">Gestion Compte</a>
+            <a href="./tableaubord.html">Tableau de Bord</a>
+            <a href="./infos-services-plateforme.html">Infos Services</a>
+            <div>
+                <button type="button" onclick="logout()">Se déconnecter</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Paramètres de compte -->
+        <section id="account-settings">
+            <h2>Paramètres de compte</h2>
+            <div class="settings-group">
+                <h3>Notifications:</h3>
+                <label><input type="checkbox" name="checkbox"> Par e-mail</label>
+                <label><input type="checkbox" name="checkbox"> Par SMS</label>
+                <label><input type="checkbox" name="checkbox"> Sur la plateforme</label>
+                <label><input type="checkbox" name="checkbox"> Sur les réseaux sociaux</label>
+                <label><input type="checkbox" name="checkbox"> Par Push</label>
+            </div>
+            
+            <div class="settings-group">
+                <h3>Abonnements:</h3>
+                <label><input type="checkbox" name="checkbox"> Abonnement Gratuit</label>
+                <label><input type="checkbox" name="checkbox"> Abonnement Premium</label>
+                <label><input type="checkbox" name="checkbox"> Abonnement Personnalisé</label>
+            </div>
+                
+            <div class="settings-group">
+                <h3>Langue:</h3>
+                <label><input type="radio" name="Language" value="fr"> Français</label>
+                <label><input type="radio" name="Language" value="en"> Anglais</label>
+                <label><input type="radio" name="Language" value="es"> Espagnol</label>
+                <label><input type="radio" name="Language" value="de"> Allemand</label>
+            </div>
+        </section>
+
+        <!-- Paramètres de confidentialité -->
+        <section id="privacy-settings">
+            <h2>Paramètres de confidentialité</h2>
+            <div class="settings-group">
+                <h3>Qui peut voir votre profil?</h3>
+                <label><input type="radio" name="profileVisibility" value="everyone"> Tout le monde</label>
+                <label><input type="radio" name="profileVisibility" value="network"> Mon réseau seulement</label>
+            </div>
+            
+            <div class="settings-group">
+                <h3>Qui peut voir vos informations personnelles?</h3>
+                <label><input type="radio" name="infoVisibility" value="everyone"> Tout le monde</label>
+                <label><input type="radio" name="infoVisibility" value="network"> Mon réseau</label>
+                <label><input type="radio" name="infoVisibility" value="me"> Seulement Moi</label>
+            </div>
+            
+            <div class="settings-group">
+                <h3>Qui peut vous contacter?</h3>
+                <label><input type="radio" name="contactVisibility" value="everyone"> Tout le monde</label>
+                <label><input type="radio" name="contactVisibility" value="network"> Mon réseau</label>
+                <label><input type="radio" name="contactVisibility" value="noone"> Personne</label>
+            </div>
+        </section>
+
+        <!-- Paramètres de sécurité -->
+        <section id="security-settings">
+            <h2>Paramètres de sécurité</h2>
+            <div class="settings-group">
+                <h3>Vérification en deux étapes:</h3>
+                <label><input type="radio" name="twoStepVerification" value="enabled"> Activé</label>
+                <label><input type="radio" name="twoStepVerification" value="disabled"> Désactivé</label>
+            </div>
+  
+            <div class="settings-group">
+                <h3>Alertes de sécurité:</h3>
+                <label><input type="radio" name="securityAlerts" value="enabled"> Activé</label>
+                <label><input type="radio" name="securityAlerts" value="disabled"> Désactivé</label>
+            </div>  
+        </section>
+    </main>
+
+    <div class="submit">
+        <button id="submit" type="submit">Enregistrer les Paramètres</button>
+    </div>
+
+    <footer>
+        <p>© 2024 LYAK-ETUDES - Paramètres du Profil</p>
+        <a href="">Conditions d'utilisation</a>
+        <a href="">Politique de confidentialité</a>
+    </footer>
+    
+</body>
+</html>

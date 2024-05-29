@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum LYAK-ETUDES</title>
+    <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+
+    <header>
+        <h1>LYAK-ETUDES</h1>
+        <!-- Barre de navigation -->
+        <nav>
+            <a href="accueil.html">Accueil</a>
+            <a href="communaute.html">Communauté</a>
+            <a href="contact.html">Contactez-nous</a>
+            <a href="rubrique.html">Boite à outil</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section des discussions -->
+        <section id="discussions">
+            <h1 class="" id="">Forum de Recherche d'Opportunités</h1>
+            <!-- Formulaire de création de nouvelle discussion -->
+            <div id="creationDiscussion">
+                <h2 class="" id="">Créer une nouvelle discussion</h2>
+                <form id="nouvelleDiscussionForm">
+                    <img src="" alt="" class="">
+                    <input type="text" id="titreDiscussion" placeholder="Titre de la discussion" required>
+                    <textarea id="contenuDiscussion" placeholder="Description" required></textarea>
+                    <button type="submit">Créer</button>
+                </form>
+            </div>
+
+            <!-- Liste des discussions -->
+            <div id="listeDiscussions">
+                <div class="discussion">
+                    <img src="" alt="" class="">
+                    <h2>Recherche de Stage en Informatique</h2>
+                    <p>Je suis à la recherche d'un stage en développement web. Des suggestions ?</p>
+                    <button onclick="ouvrirDiscussion(this)">Répondre</button>
+                    <div class="reponses"></div>
+                </div>
+
+                <div class="discussion">
+                    <img src="" alt="" class="">
+                    <h2 class="" id="">Alternance en Marketing Digital</h2>
+                    <p class="" id="">Quelqu'un a des conseils pour trouver une alternance en marketing digital ?</p>
+                    <button onclick="ouvrirDiscussion(this)">Répondre</button>
+                    <div class="reponses"></div>
+                </div>
+
+                <div class="discussion">
+                    <img src="" alt="" class="">
+                    <h2 class="" id="">Recherche de Stage en Cybersécurité</h2>
+                    <p class="" id="">Je suis à la recherche d'un stage en cybersécurité. Des suggestions ?</p>
+                    <button onclick="ouvrirDiscussion(this)">Répondre</button>
+                    <div class="reponses"></div>
+                </div>
+
+                <div class="discussion">
+                    <img src="" alt="" class="">
+                    <h2 class="" id="">Alternance en Audiovisuel</h2>
+                    <p class="" id="">Quelqu'un a des conseils pour trouver une alternance en audiovisuel ?</p>
+                    <button onclick="ouvrirDiscussion(this)">Répondre</button>
+                    <div class="reponses"></div>
+                </div>
+
+                <div class="discussion">
+                    <img src="" alt="" class="">
+                    <h2 class="" id="">Recherche de Stage en Architecture</h2>
+                    <p class="" id="">Je suis à la recherche d'un stage en architecture. Des suggestions ?</p>
+                    <button onclick="ouvrirDiscussion(this)">Répondre</button>
+                    <div class="reponses"></div>
+                </div>
+
+                <div class="discussion">
+                    <img src="" alt="" class="">
+                    <h2 class="" id="">Alternance en 3D-animation</h2>
+                    <p class="" id="">Quelqu'un a des conseils pour trouver une alternance en 3D-animation ?</p>
+                    <button onclick="ouvrirDiscussion(this)" class="" id="">Répondre</button>
+                    <div class="reponses"></div>
+                </div>
+                <!-- Ajoutez d'autres discussions ici -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 LYAK-ETUDES</p>
+        <a href="conditions.html">Conditions d'utilisation</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+    </footer> 
+
+    <script>
+        document.getElementById('nouvelleDiscussionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const titre = document.getElementById('titreDiscussion').value;
+            const contenu = document.getElementById('contenuDiscussion').value;
+        
+            const nouvelleDiscussion = document.createElement('div');
+            nouvelleDiscussion.className = 'discussion';
+        
+            const h2 = document.createElement('h2');
+            h2.textContent = titre;
+            nouvelleDiscussion.appendChild(h2);
+        
+            const p = document.createElement('p');
+            p.textContent = contenu;
+            nouvelleDiscussion.appendChild(p);
+        
+            const button = document.createElement('button');
+            button.textContent = 'Répondre';
+            button.onclick = function() {
+                ouvrirDiscussion(button);
+            };
+            nouvelleDiscussion.appendChild(button);
+        
+            const reponses = document.createElement('div');
+            reponses.className = 'reponses';
+            nouvelleDiscussion.appendChild(reponses);
+        
+            document.getElementById('listeDiscussions').appendChild(nouvelleDiscussion);
+        
+            // Réinitialiser le formulaire
+            document.getElementById('nouvelleDiscussionForm').reset();
+        });
+    </script>
+
+    <script>
+        function ouvrirDiscussion(button) {
+            const discussion = button.parentElement;
+            const reponses = discussion.querySelector('.reponses');
+        
+            const reponseForm = document.createElement('form');
+            reponseForm.className = 'reponseForm';
+            reponseForm.onsubmit = function(event) {
+                event.preventDefault();
+                const reponseTexte = reponseForm.querySelector('textarea').value;
+                const reponse = document.createElement('div');
+                reponse.className = 'reponse';
+                reponse.textContent = reponseTexte;
+                reponses.appendChild(reponse);
+                reponseForm.remove();
+            };
+        
+            const textarea = document.createElement('textarea');
+            textarea.placeholder = 'Votre réponse...';
+            textarea.required = true;
+            reponseForm.appendChild(textarea);
+        
+            const submitButton = document.createElement('button');
+            submitButton.type = 'submit';
+            submitButton.textContent = 'Envoyer';
+            reponseForm.appendChild(submitButton);
+        
+            reponses.appendChild(reponseForm);
+        }
+    </script>
+
+</body>
+</html>

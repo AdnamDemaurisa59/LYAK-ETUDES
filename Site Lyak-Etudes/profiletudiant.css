@@ -1,0 +1,378 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #395C9F;
+    padding: 5px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+header a {
+    text-decoration: none;
+}
+
+section {
+    margin-left: 30px; 
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    margin-right: 20px; /* Ajoute un espacement à droite pour chaque lien (ajustez selon vos besoins) */
+    font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white; 
+}
+
+ /* Style pour la liste déroulante */
+ nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Masquer la liste déroulante par défaut */
+    position: absolute;
+    background-color: black;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li:hover ul {
+    display: block; /* Afficher la liste déroulante au survol */
+}
+
+nav ul li {
+    display: block;
+}
+
+nav ul a {
+    padding: 10px;
+    display: block;
+}
+
+header h1 {
+    margin: 15px;
+    color: #fff;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;    
+    border-radius: 10px;
+    border-radius: 3em;
+}
+
+.search-bar input {
+    border-radius: 5px 0 0 5px;
+    border:solid 2px #fff;
+    box-sizing:border-box;
+
+    transition:all 2s ease-in;
+    width:200px;
+    height: 30px;
+}
+
+.search-bar button {
+    color: black;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    width: 150px;
+
+    border:solid 2px #3e5e80;
+    border-radius: 5px 0 0 5px;
+    padding:7px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profil-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profil-student {
+    display: flex;
+    align-items: center;
+}
+
+.img-student img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 2px solid black;
+}
+
+
+
+
+.img-student img {
+
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.img-student input {
+    margin-top: 10px;
+}
+
+.profil1 h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.profil1 p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+button#view-portfolio {
+    padding: 10px 20px;
+    background-color: #0073b1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#view-portfolio:hover {
+    background-color: #005b8b;
+}
+
+.reseau-sociaux {
+    text-align: center;
+}
+
+.reseaux a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.detailsprofil, .education, .competences-study, .experiences-study, .contact-me {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.detailsprofil h2, .education h3, .competences-study h2, .experiences-study h2, .contact-me h3 {
+    margin-top: 0;
+    color: #0073b1;
+}
+
+.detailsprofil {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.detailsprofil a {
+        padding: 10px 20px;
+        background-color: #0073b1;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+}
+
+.detailsprofil a:hover {
+    background-color: #005b8b;
+}
+
+.skills div, .experience {
+    margin-bottom: 15px;
+}
+
+.experience img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.experience h4, .experience p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.experience a {
+    color: #0073b1;
+    text-decoration: none;
+}
+
+.experience a:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none; /* Cache le modal par défaut */
+    position: fixed; /* Positionne le modal en fixe */
+    z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
+    left: 0;
+    top: 0;
+    width: 100%; /* Pleine largeur */
+    height: 100%; /* Pleine hauteur */
+    overflow: auto; /* Active le défilement si nécessaire */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+}
+
+/* Contenu du modal */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Centre le modal verticalement et horizontalement */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largeur du modal */
+    max-width: 600px; /* Largeur maximale du modal */
+    border-radius: 8px; /* Bordures arrondies */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    animation: fadeIn 0.3s; /* Animation d'apparition */
+}
+
+/* Bouton de fermeture */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style pour les groupes de formulaires */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Style pour les labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Style pour les champs de formulaire */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style pour les boutons */
+.btn {
+    background-color: #4CAF50; /* Vert */
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Vert plus foncé */
+}
+
+.btn-submit {
+    background-color: #008CBA; /* Bleu */
+}
+
+.btn-submit:hover {
+    background-color: #007BB5; /* Bleu plus foncé */
+}
+
+/* Style pour le groupe de boutons */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.contact-me div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contact-me img {
+    width: 50px;
+    height: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {     
+    border-bottom: 2px solid white; 
+}
+
+@media (max-width: 768px) {
+    .profil-user {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-student img {
+        margin: 0 auto 20px;
+    }
+}

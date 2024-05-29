@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres de stages et alternances - LYAK-ETUDES</title>
+    <link rel="stylesheet" href="offres.css">
+</head>
+<body>
+
+    <header>
+        <a href="accueil.html"><h1>LYAK-ETUDES</h1></a>
+    </header>
+
+    <main>
+        <div class="main-header">
+            <h3>Trouvez votre prochaine opportunité</h3>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Rechercher un stage ou une alternance">
+                <button id="searchButton">Rechercher</button>
+            </div>
+        </div>
+
+        <section class="offer-group">
+            <div class="last-offer">
+                <h3>Découvrez l'ensemble de nos offres</h3>
+            </div>
+            <div class="offers-container">
+                <!-- Offer 1 -->
+                <div class="offer">
+                    <div class="offer-details">
+                        <a href="#" class="offer-domain">Informatique</a>
+                        <h2 class="offer-title">Développeur Web</h2>
+                        <p class="offer-description">Rejoignez notre équipe pour développer des applications web innovantes.</p>
+                        <a href="#" class="offer-more">En savoir plus</a>
+                        <button class="apply-button">Postuler</button>
+                    </div>
+                </div>
+                <!-- Offer 2 -->
+                <div class="offer">
+                    <div class="offer-details">
+                        <a href="#" class="offer-domain">Marketing & Communication</a>
+                        <h2 class="offer-title">Community Manager</h2>
+                        <p class="offer-description">Participez à la gestion de notre communauté en ligne et à la création de contenu.</p>
+                        <a href="#" class="offer-more">En savoir plus</a>
+                        <button class="apply-button">Postuler</button>
+                    </div>
+                </div>
+                <!-- Offer 3 -->
+                <div class="offer">
+                    <div class="offer-details">
+                        <a href="#" class="offer-domain">Création & Digital Design</a>
+                        <h2 class="offer-title">Graphiste</h2>
+                        <p class="offer-description">Contribuez à la conception graphique de nos projets créatifs.</p>
+                        <a href="#" class="offer-more">En savoir plus</a>
+                        <button class="apply-button">Postuler</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 LYAK-ETUDES</p>
+        <a href="conditions.html">Conditions d'utilisation</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+    </footer>
+
+    <script src="">
+        document.getElementById('searchButton').addEventListener('click', function() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const offers = document.querySelectorAll('.offer');
+        
+            offers.forEach(offer => {
+                const title = offer.querySelector('.offer-title').textContent.toLowerCase();
+                const domain = offer.querySelector('.offer-domain').textContent.toLowerCase();
+                const description = offer.querySelector('.offer-description').textContent.toLowerCase();
+        
+                if (title.includes(query) || domain.includes(query) || description.includes(query)) {
+                    offer.style.display = 'block';
+                } else {
+                    offer.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <script>
+        
+    </script>
+    
+</body>
+</html>

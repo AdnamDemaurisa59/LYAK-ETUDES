@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil</title>
+    <link rel="stylesheet" href="profiletudiant.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="profiletudiant.jsx"></script>
+
+</head>
+<body>
+
+    <header>
+        <div class="" id="">
+            <a href="accueil.html"><h1>LYAK-ETUDES</h1> </a>
+        </div>
+        <div class="search-bar" id="">
+            <input type="text" placeholder="Rechercher des opportunités">
+            <button type="button">Rechercher</button>   
+        </div>
+        <nav>
+                <li>
+                    <a href="./accueil.html">Accueil</a>
+                    <!-- Liste déroulante pour la rubrique Boite à outil -->
+                    <ul>
+                        <li><a href="./actualite-entreprises.html">Actualité Marché de l'emploi</a></li>
+                        <li><a href="./communaute.html">Communauté</a></li>
+                        <li><a href="./forum.html">Forum</a></li>
+                        <li><a href="#">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Boite à Outil</a></li>
+                        <!-- Ajoutez d'autres liens pour la boite à outils -->
+                    </ul>
+                </li>
+                <li>
+                    <a href="./offres.html">Stages</a>
+                    <ul>
+                        <li><a href="./avis-stage-alternance.html">Avis sur les stages</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="alternance.html">Alternances</a>
+                    <ul>
+                        <li><a href="avis-stage-alternance.html">Avis sur les alternances</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Mon Profil</a>
+                    <ul>
+                        <li><a href="./parametresprofil.html">Paramètres Profil</a></li>
+                        <li><a href="./gestion-moncompte.html">Gestion Compte</a></li>
+                        <li><a href="./tableaubord.html">Tableau de Bord</a></li>
+                        <li><a href="#" alt="">Mes notes de stages</a></li>
+                        <li><a href="./modifier-profil.html">Modification Profil</a></li>
+                        <li><a href="./disponibilite.html">Mes disponibilités</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Entreprise</a>       
+                    <ul>
+                        <li><a href="./actualite-entreprises.html">Actualités des entreprises</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a></a></li>
+                    </ul>
+                </li>
+                <div class="logout-button">
+                    <button type="button" onclick="logout()"><i class="fa-solid fa-power-off"></i></button>
+                </div>
+            </nav>
+    </header>
+
+    
+    
+        <main>
+            <section class="profil-user">
+                <div class="profil-student">
+                    <div class="profil-student1">
+                        <div class="profil-student2">
+                            <div class="img-student">
+                                <img src="" class="" id="studentPhoto" alt="Photo de l'étudiant">
+                                <input type="file" id="fileInput" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="profil-student3" id="">
+                            <div class="profil1" id="">
+                                <h4 class="description-profil" id="">Bonjour, Je m'appelle Adnam, je suis un développeur front-end passionné d'informatique</h4>
+                                <p class="" id="">Découvrez ci-dessous mes différents projets, ou cliquez sur le bouton ci-dessous</p>
+                                <div id="profilstudent-container">
+                                    <!-- La description du profil de l'étudiant seront injectés ici  -->
+                                </div>
+                                <button id="view-portfolio" class="">Voir les portfolios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="reseau-sociaux" id="">
+                    <h2>Pour me contacter:</h2>
+                    <div class="reseaux" id="">
+                        <a href="https://www.linkedin.com/signup?_l=fr&trk=guest_homepage-basic_nav-header-join" target="_blank">
+                            <img src="./logo image/logo-linkedin.jpeg" alt="LinkedIn">
+                        </a>
+                        <a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home" target="_blank">
+                            <img src="./logo image/logo-github.jpeg" alt="Github">
+                        </a>
+                        <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=23&ct=1712153617&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fcobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26nlp%3d1%26RpsCsrfState%3d253e047b-3c31-d478-9bcb-586381c64418&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c" target="_blank">
+                            <img src="./logo image/logo-outlook.jpeg" alt="Outlook">
+                        </a>
+                        <a href="https://accounts.google.com/v3/signin/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&ec=asw-gmail-globalnav-signin&theme=mn&ddm=0" target="_blank">
+                            <img src="./logo image/logo-gmail.jpeg" alt="Gmail">
+                        </a>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="detailsprofil">
+                <div class="cv" id="">
+                    <a href="#" target="_blank">Voir le CV</a>
+                </div>
+                <div id="portfolio" class="">
+                    <a href="#" target="_blank">Voir le portfolio</a>
+                </div>
+                <div class="modification" id="">
+                    <a class="open-modal" href="#" target="">Modifier mon profil</a>
+                </div>
+            </section>
+    
+            <div id="modal" class="modal">
+                <div class="modal-content" id="">
+                    <span class="close-button">&times;</span>
+                    <h2>Modifier votre profil</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="nom">Nom :</label>
+                            <input type="text" id="nom" name="nom" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="formation">Education :</label>
+                            <input type="text" id="formation" name="formation" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="competences">Compétences :</label>
+                            <input type="text" id="competences" name="competences" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Expérience :</label>
+                            <input type="text" id="experience" name="experience" class="form-control">
+                        </div>
+                        <div class="form-group button-group">
+                            <button type="button" id="add-formation" class="btn">Ajouter Formation</button>
+                            <button type="button" id="add-competences" class="btn">Ajouter Compétences</button>
+                            <button type="button" id="add-experience" class="btn">Ajouter Expérience</button>
+                            <button type="button" id="upload-cv" class="btn">Télécharger CV</button>
+                            <button type="button" id="add-portfolio" class="btn">Ajouter Portfolio</button>
+                            <button type="submit" class="btn btn-submit">Enregistrer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+            <section class="profile-details">
+                <h2 class="" id="">Détails du Profil</h2>
+                <p class="" id="" >Nom-Prénom: Koud Demaurisa Adnam</p>
+                <p class="" id="">Établissement Scolaire: Lille Ynov Campus</p>
+                <p class="" id="">Poste recherché: Développeur Front-End</p>
+                <div id="profile-container">
+                    <!-- La description du profil de l'étudiant seront injectés ici  -->
+                </div>
+            </section>
+    
+            <section class="education">
+                <h3 class="" id="">Education</h3>
+                <div id="educations-container">
+                    <!-- La descriptions  du niveau d'études seront injectés ici  -->
+                </div>
+            </section>
+    
+            <section class="competences-study">
+                <h2>Compétences</h2>
+                <div class="skills" id="">
+                    <div id="educations-container">
+                        <!-- La description des compétences seront injectés ici  -->
+                    </div> 
+                </div>
+            </section>
+    
+            <section class="experiences-study">
+                <h2>Expérience</h2>
+                <div class="experience">
+                    <img src="./logo image/image6.jpeg" alt="Logo Entreprise">
+                    <h4 class="" id="">Développeur Front-End</h4>
+                    <p class="" id="">Stage chez Radioking</p>
+                    <p class="" id="">Période</p>
+                    <a href="#">Voir plus</a>
+                </div>
+                <div class="experience">
+                    <img src="./logo image/image7.png" alt="Logo Entreprise">
+                    <h4 class="" id="">Développeur Front-End</h4>
+                    <p class="" id="">Stage chez Bealy</p>
+                    <a href="#">Voir plus</a>
+                </div>
+                <div class="experience">
+                    <img src="./logo image/image8.jpeg" alt="Logo Entreprise">
+                    <h4 class="" id="">Développeur Front-End</h4>
+                    <p class="" id="">Stage chez Inoco</p>
+                    <a href="#">Voir plus</a>
+                </div>
+                <div id="educations-container">
+                    <!-- La descriptions des expériences de l'étudiant seront injectés ici  -->
+                </div>
+            </section>
+    
+            <section class="contact-me">
+                <h3>Contactez-moi</h3>
+                <div class="contact-me1" id="">
+                    <a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home" target="_blank">
+                        <img src="./logo image/logo-github.jpeg" alt="Github">
+                    </a>
+                    <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=23&ct=1712153617&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fcobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26nlp%3d1%26RpsCsrfState%3d253e047b-3c31-d478-9bcb-586381c64418&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c" target="_blank">
+                        <img src="./logo image/logo-outlook.jpeg" alt="Outlook">
+                    </a>
+                    <a href="https://accounts.google.com/v3/signin/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&ec=asw-gmail-globalnav-signin&theme=mn&ddm=0" target="_blank">
+                        <img src="./logo image/logo-gmail.jpeg" alt="Gmail">
+                    </a>
+                </div>
+            </section>
+        </main>
+   
+
+    <script>
+            // JavaScript pour gérer le modal
+    document.addEventListener('DOMContentLoaded', function() {
+        var modal = document.getElementById("modal");
+        var openModal = document.querySelectorAll(".open-modal");
+        var closeButton = document.querySelector(".close-button");
+
+        openModal.forEach(function(btn) {
+            btn.addEventListener("click", function(event) {
+                event.preventDefault();
+                modal.style.display = "block";
+            });
+        });
+
+        closeButton.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+    </script>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('studentPhoto').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('studentPhoto').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('uploadButton').addEventListener('click', function() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const formData = new FormData();
+                formData.append('photo', file);
+
+                fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Photo téléchargée avec succès');
+                    } else {
+                        alert('Erreur lors du téléchargement de la photo');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                    alert('Erreur lors du téléchargement de la photo');
+                });
+            } else {
+                alert('Veuillez sélectionner une photo');
+            }
+        });
+    </script>
+    
+</body>
+</html>

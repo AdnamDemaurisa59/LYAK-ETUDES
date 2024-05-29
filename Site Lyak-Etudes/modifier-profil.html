@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modfication Profil</title>
+    <link rel="stylesheet" href="modifier-profil.css">
+</head>
+<body>
+
+    <header>
+        <a href="accueil.html"><h1>LYAK-ETUDES</h1></a>
+        <nav>
+            <a href="profiletudiant.html">Mon Profil</a>
+            <a></a>
+        </nav>
+    </header>
+
+    <div>
+        <h2>Mettez votre profil à jour</h2>
+    </div>
+
+    <main>
+        <section class="modification" id="modification">
+            <section>
+                <form action="" method="post" id="" validate >  
+                    <fieldset> 
+                        <legend>Informations Personnel </legend>
+                        <div class="text">
+                            <label for="fName">Votre prénom</label>
+                            <input type="text" name="fName" id="fName" placeholder="Votre prénom" autocomplete="given-name" value="" required>
+                        </div>
+                        <div class="text">
+                            <label for="lName">Votre nom de famille</label>
+                            <input type="text" name="lName" id="lName" placeholder="Votre nom de famille" autocomplete="family-name" required>
+                        </div>
+                        <div>
+                            <label>Sexe</label>
+                            <select name="" id="">
+                                <option>-- Quel est votre genre ? </option>
+                                      <!-- Options générées dynamiquement à partir de l'API -->
+                                <option>Homme</option>
+                                <option>Femme</option>
+                                <option>Non Genré</option>
+                            </select>
+                        </div>
+                        <div class="text">
+                            <label for="dob">Votre date de naissance</label>
+                            <input type="date" name="dob" id="dob" placeholder="Votre date de naissance" autocomplete="on" required>
+                        </div>
+                        <div class="text">
+                            <label for="email">Votre adresse email</label>
+                            <input type="email" name="email" id="email" placeholder="Votre adresse email" required>
+                        </div>
+                        <div class="text">
+                            <label for="address">Adresse postal:</label>
+                            <input type="text" id="address" name="address" placeholder="Entrez votre adresse" required>
+                        </div>
+                        <div class="text">
+                            <label for="tel">Votre numéro de téléphone</label>
+                            <input type="tel" name="tel" id="tel" placeholder="Votre numéro de téléphone"  required>
+                        </div>
+                        <div class="select">
+                            <label>Année d'obtiention du diplôme</label>
+                            <select>
+                                <option>--Quelle année ?</option>
+                                <option>2024</option>
+                                <option>2023</option>
+                                <option>2022</option>
+                                <option>2021</option>
+                                <option>2020</option>
+                            </select>
+                        </div>
+                        <div class="select">
+                            <label>Niveau d'études</label>
+                            <select>
+                                <option>--Votre niveau d'études ?</option>
+                                <option>Bac+5</option>
+                                <option>Bac+4</option>
+                                <option>Bac+3</option>
+                                <option>Bac+2</option>
+                                <option>Bac</option>
+                            </select>
+                        </div>
+                        <div class="select">
+                            <label>Type de diplôme</label>
+                            <select>
+                                <option>--Votre diplôme ?</option>
+                                <option>Master</option>
+                                <option>Licence</option>
+                                <option>BTS/DUT</option>
+                                <option>BAC</option>
+                                <option>CAP/BEP</option>
+                            </select>
+                        </div>
+                        <div class="textarea">
+                            <label>Description</label>
+                            <textarea name="message" id="message" placeholder="Décrivez vos expériences professionnelles et/ou vos compétences linguistiques"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Enregistrer</button>
+                        </div>
+                    </fieldset>  
+                </form>  
+            </section>
+        </section>
+
+    </main> <br> <br>
+
+    <footer>
+        <p> © 2024 LYAK-ETUDES</p>
+    </footer>
+    
+</body>
+</html>
