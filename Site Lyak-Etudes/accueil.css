@@ -12,6 +12,8 @@ header {
     display: flex;
     align-items: center; 
     justify-content: space-between; 
+    position: sticky;
+    top: 0px;
 }
 
 header a {
@@ -261,49 +263,78 @@ main {
 .find-offer-list a {
     text-decoration: none;
     color: #000;
+    font-weight: bold;
 }
 
-.free-training {
-    text-align: center;
+.find-offer-list a:hover {
+    color: rgba(0, 0, 0, 0.673);
+}
+
+
+
+.articles {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.month {
     margin-bottom: 40px;
 }
 
-.free-training h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.training-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.training {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    margin: 10px;
+.month h3 {
+    background-color: #395C9F;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
     text-align: center;
+}
+
+.month h3:hover {
+    color: rgba(255, 255, 255, 0.833);
+}
+
+.month a {
+    text-decoration: none;
+}
+
+.month-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.article-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    width: 250px;
+    text-align: center;
 }
 
-.training:hover {
+.article-card:hover {
     transform: scale(1.05);
 }
 
-.training img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+.article-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
-.training a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1.1rem;
+.article-card h4 {
+    padding: 10px;
+    font-size: 1.1em;
+    color: #395C9F;
+}
+
+.article-card .date {
+    padding: 10px;
+    color: #999;
+    font-size: 0.9em;
 }
 
 .profile-group {

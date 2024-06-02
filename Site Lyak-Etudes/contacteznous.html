@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - LYAK-ETUDES</title>
+    <link rel="stylesheet" href="./contacteznous.css">
+</head>
+<body>
+
+    <header>
+        <a href="./accueil.html"><h1>LYAK-ETUDES</h1></a>
+           <!-- Barre de navigation -->
+    <nav>
+        <a href="./accueil.html">Accueil</a>
+        <a href="./contacteznous-pro.html">Contact Pro</a>
+    </nav>
+    </header>
+
+    <main>
+       <!-- Section de contact -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p>Vous êtes un étudiant ou une étudiante, vous avez des questions ? Nous vous invitons à remplir le formulaire ci-dessous, nos équipes reviendrons vers vous.</p>
+
+            <!-- Formulaire de contact -->
+            <form action="process_contact.php" method="post">
+                <div class="form-group">
+                    <label for="fName">Prénom:</label>
+                    <input type="text" id="fName" name="fName" placeholder="Renseigner votre prénom" required>
+                </div>
+                <div class="form-group">
+                    <label for="lName">Nom:</label>
+                    <input type="text" id="lName" name="lName" placeholder="Renseigner votre nom de famille" required>
+                </div>
+                <div class="form-group">
+                    <label for="tel">Téléphone:</label>
+                    <input type="tel" id="tel" name="tel" placeholder="Renseigner votre numéro de téléphone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Renseigner votre adresse mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Laisser un message" rows="4"></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Le reste de votre contenu HTML va ici -->
+    <article class="container">
+        <p>Contactez-nous à l'adresse <a href="mailto:contact-mon-projet@lyak-etudes.com">contact-mon-projet@lyak-etudes.com</a></p>
+        <p>Siège social: Lille</p>
+        <p>Contactez le service au <a href="tel:+330103040506">01.03.04.05.06</a></p>
+    </article> 
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <p>© 2024 LYAK-ETUDES</p>
+            <a href="conditions.html">Conditions d'utilisation</a> &nbsp;|&nbsp;
+            <a href="confidentialite.html">Politique de confidentialité</a>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+header {
+    background-color: #395C9F;
+    padding: 5px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    position: sticky;
+    top: 0px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    margin-right: 20px; /* Ajoute un espacement à droite pour chaque lien (ajustez selon vos besoins) */
+    font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white; 
+    
+}
+
+ /* Style pour la liste déroulante */
+ nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Masquer la liste déroulante par défaut */
+    position: absolute;
+    background-color: black;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+
+}
+
+nav li:hover ul {
+    display: block; /* Afficher la liste déroulante au survol */
+}
+
+nav ul li {
+    display: block;
+}
+
+nav ul a {
+    padding: 10px;
+    display: block;
+}
+
+header h1 {
+    margin: 15px;
+    color: #fff;
+}
+
+/* Main */
+main {
+    padding: 20px 0;
+}
+
+/* Sections */
+h2 {
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.presentation, #concept, #avantages {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.presentation h3, .presentation p {
+    margin: 10px 0;
+}
+
+/* Lists */
+main ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main ul li {
+    background: #e7e7e7;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: #4CAF50 5px solid;
+}
+
+/* Footer */
+footer {
+    background-color: #395C9F;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}

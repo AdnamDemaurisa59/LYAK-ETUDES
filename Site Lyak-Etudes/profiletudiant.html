@@ -130,6 +130,9 @@
                 <div class="modification" id="">
                     <a class="open-modal" href="#" target="">Modifier mon profil</a>
                 </div>
+                <div id="open-modal1" class="">
+                    <a href="#" target="_blank">Notation Stage/Alternance</a>
+                </div>
             </section>
     
             <div id="modal" class="modal">
@@ -164,6 +167,53 @@
                     </form>
                 </div>
             </div>
+
+
+            <div id="modal1" class="modal1">
+                <div class="modal1-content">
+                    <span class="close1">&times;</span>
+                    <section class="avis-form">
+                        <form action="#" method="post" autocomplete="on">
+                            <label for="entreprise">Nom de l'entreprise :</label>
+                            <input type="text" id="entreprise" name="entreprise" placeholder="Renseigner l'entreprise où le stage/l'alternance a été effectué" required>
+            
+                            <label for="date-debut">Date de début du stage ou de l'alternance :</label>
+                            <input type="date" id="date-debut" name="date-debut" placeholder="JJ/MM/AAAA" required>
+            
+                            <label for="date-fin">Date de fin du stage ou de l'alternance :</label>
+                            <input type="date" id="date-fin" name="date-fin" placeholder="JJ/MM/AAAA" required>
+            
+                            <label for="missions">Les missions qui m'ont été confiées étaient-elles en adéquation avec mon cursus ?</label>
+                            <input type="text" id="missions" name="missions" placeholder="Quelles missions vous ont été confiées ?" required>
+            
+                            <label for="informations">J'ai appris de nouvelles choses pendant mon stage/alternance :</label>
+                            <input type="text" id="informations" name="informations" placeholder="Qu'avez-vous appris ?" required>
+            
+                            <label for="competences">J'ai pu développer mes compétences professionnelles :</label>
+                            <input type="text" id="competences" name="competences" placeholder="Quels compétences avez-vous pu développer ?" required>
+            
+                            <label for="experience">J'ai pu acquérir une expérience professionnelle :</label>
+                            <input type="text" id="experience" name="experience" placeholder="Avez-vous pu acquérir de l'expérience ?" required>
+            
+                            <label for="recommander">Recommanderiez-vous cette entreprise à votre entourage ?</label>
+                            <div class="radio-group">
+                                <input type="radio" id="oui" name="recommander" value="oui">
+                                <label for="oui">Oui</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="non" name="recommander" value="non">
+                                <label for="non">Non</label>
+                            </div>
+            
+                            <label for="avis">Avis sur le stage ou l'alternance :</label>
+                            <textarea id="avis" name="avis" placeholder="Qu'avez-vous pensé de votre stage/alternance ?" rows="4" required></textarea>
+            
+                            <button type="submit">Soumettre</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
     
             <section class="profile-details">
                 <h2 class="" id="">Détails du Profil</h2>
@@ -258,6 +308,25 @@
             }
         });
     });
+    </script>
+
+
+    <script>
+        // Étape 3 : JavaScript
+        document.getElementById('open-modal1').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('modal1').style.display = "block";
+        });
+    
+        document.getElementsByClassName('close1')[0].addEventListener('click', function() {
+            document.getElementById('modal1').style.display = "none";
+        });
+    
+        window.addEventListener('click', function(event) {
+            if (event.target == document.getElementById('modal1')) {
+                document.getElementById('modal1').style.display = "none";
+            }
+        });
     </script>
 
     <script>
