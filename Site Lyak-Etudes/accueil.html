@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="accueil.css">
+    <link rel="stylesheet" href="./accueil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -28,7 +28,6 @@
                         <li><a href="./rubrique.html">Boite à Outil</a></li>
                         <li><a href="./contacteznous.html">Contactez-nous</a></li>
                         <li><a href="./aproposdenous.html">A propos de nous</a></li>
-
                         <!-- Ajoutez d'autres liens pour la boite à outils -->
                     </ul>
                 </li>         
@@ -60,7 +59,7 @@
     <main>
         <section class="presentationsite">
             <div class="img-title" id="">
-                <img src="./logo image/image-accueil.jpeg" alt="Photo">
+                <img src="./logo image/Filieres/alternance.jpg" alt="Photo">
             </div> 
           
             <div class="intro" id="">
@@ -72,12 +71,13 @@
                     <p class="" id="">Découvrez des stages et des alternances qui vous correspondent. Explorez par lieu, secteur et plus encore</p>
                 </div>  
     
-                <div class="search-bar" id="">
-                    <input type="text" placeholder="Rechercher des opportunités">
+                <div class="searchBar" id="searchBar">
+                    <input type="text" class="search" id="searchInput" value="" onchange="ouvrirPage()" placeholder="Rechercher des opportunités">
                     <div class="icon-loupe">
                         <i class="fas fa-search"></i>
                     </div>
                 </div> 
+                <div id="suggestions"></div>
             </div>
         </section>
     
@@ -133,35 +133,43 @@
             <h2>Trouver des stages et alternances correspondant à votre filière d'études</h2>
             <div class="find-offer-list">
                 <div>
-                    <img src="./logo image/Architecture/image1.jpeg" alt="">
+                    <img src="./logo image/Filieres/archi.png" alt="">
                     <a href="./offres.html" target="_blank">Architecture d'intérieur</a>
                 </div>
                 <div>
-                    <img src="./logo image/Cybersécurité/image4.png" alt="">
+                    <img src="./logo image/Filieres/cyber.jpeg" alt="">
                     <a href="./offres.html" target="_blank">Cybersécurité</a>
                 </div>
                 <div>
-                    <img src="./logo image/Informatique/image4.jpeg" alt="">
+                    <img src="./logo image/Filieres/informatique.jpeg" alt="">
                     <a href="./offres.html" target="_blank">Informatique</a>
                 </div>
                 <div>
-                    <img src="./logo image/Audiovisuel/image5.jpeg" alt="">
+                    <img src="./logo image/Filieres/audiovisuel.jpeg" alt="">
                     <a href="./offres.html" target="_blank">Audiovisuel</a></div>
                 <div>
-                    <img src="./logo image/Creation-Design/image3.jpeg" alt="">
+                    <img src="./logo image/Filieres/ux.webp" alt="">
                     <a href="./offres.html" target="_blank">Création & Digital Design</a>
                 </div>
                 <div>
-                    <img src="./logo image/Marketing/image1.png" alt="">
+                    <img src="./logo image/Filieres/digital.jpeg" alt="">
                     <a href="./offres.html" target="_blank">Marketing & Communication</a>
                 </div>
                 <div>
-                    <img src="./logo image/3D, Animation et Jeux-Vidéos/image1.jpeg" alt="">
+                    <img src="./logo image/Filieres/3d.webp" alt="">
                     <a href="./offres.html" target="_blank">3D, Animation & Jeux Vidéo</a>
                 </div>
                 <div>
-                    <img src="./logo image/Tech&Business/image4.jpeg" alt="">
+                    <img src="./logo image/Filieres/tech.jpeg" alt="">
                     <a href="./offres.html" target="_blank">Tech & Business</a>
+                </div>
+                <div>
+                    <img src="./logo image/Filieres/science.jpeg" alt="">
+                    <a href="./offres.html" target="_blank">Sciences de L'ingénieur</a>
+                </div>
+                <div>
+                    <img src="./logo image/Filieres/langue.jpeg" alt="">
+                    <a href="./offres.html" target="_blank">Langues étrangères appliquées</a>
                 </div>
             </div>
         </section>
@@ -193,25 +201,70 @@
                 </div>
             </div>
         </section>
-    
+
+
         <section class="profile-group">
             <h2 class="section-title">Découvrez les profils des étudiants</h2>
-            <a href="./profils-etudiants.html" class="discover-profiles-btn">Découvrez d'autres profils d'étudiants</a>
+            <a href="profiles.html" class="discover-profiles-btn">Découvrez d'autres profils d'étudiants</a>
             <div class="profile-list">
                 <div class="profile-item">
                     <div class="img-profile">
-                        <img src="path/to/image.jpg" alt="Photo de l'étudiant">
+                        <img src="./logo image/etudiant/adnam.jpeg" alt="Photo de l'étudiant">
                     </div>
                     <div class="name-study">
-                        <a href="profiletudiant.html" class="profile-name">Nom de l'Étudiant</a>
+                        <a href="profiletudiant.html" class="profile-name">Adnam James</a>
                     </div>
                     <div class="job-search">
-                        <a href="#" class="profile-job">Métier Recherché</a>
+                        <a href="#" class="profile-job">Développeur Front-End</a>
                     </div>
                 </div>
-                <!-- Répétez .profile-item pour d'autres profils -->
+                <div class="profile-item">
+                    <div class="img-profile">
+                        <img src="./logo image/etudiant/alexandra.jpeg" alt="Photo de l'étudiant">
+                    </div>
+                    <div class="name-study">
+                        <a href="profiletudiant.html" class="profile-name">MICHONET Alexandra</a>
+                    </div>
+                    <div class="job-search">
+                        <a href="#" class="profile-job">Developpeur full-stack</a>
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <div class="img-profile">
+                        <img src="./logo image/etudiant/yenam.jpeg" alt="Photo de l'étudiant">
+                    </div>
+                    <div class="name-study">
+                        <a href="profiletudiant.html" class="profile-name">MENSAH Yenam</a>
+                    </div>
+                    <div class="job-search">
+                        <a href="#" class="profile-job">Developpeur full-stack</a>
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <div class="img-profile">
+                        <img src="./logo image/etudiant/alya.jpeg" alt="Photo de l'étudiant">
+                    </div>
+                    <div class="name-study">
+                        <a href="profiletudiant.html" class="profile-name">FOURNE Alya</a>
+                    </div>
+                    <div class="job-search">
+                        <a href="#" class="profile-job">Developpeur full-stack</a>
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <div class="img-profile">
+                        <img src="./logo image/etudiant/paul.jpeg" alt="Photo de l'étudiant">
+                    </div>
+                    <div class="name-study">
+                        <a href="profiletudiant.html" class="profile-name">DA SILVA Paul</a>
+                    </div>
+                    <div class="job-search">
+                        <a href="#" class="profile-job">Developpeur full-stack</a>
+                    </div>
+                </div>
             </div>
         </section>
+        
 
 
         <section class="testimonials">
@@ -220,7 +273,7 @@
                 <div class="testimonial" id="">
                     <p>"Lyak-Études m'a aidé à trouver le stage parfait pour moi. Je recommande vivement cette plateforme!"</p>
                     <div class="student-info" id="">
-                        <img src="path_to_image" class="" alt="Photo">
+                        <img src="./logo image/etudiant/temo.jpg" class="" alt="Photo">
                         <div class="student-name" id="">Jean Dupont</div>
                         <div class="student-course" id="">Marketing & Communication</div>
                     </div>
@@ -228,7 +281,7 @@
                 <div class="testimonial">
                     <p class="" id="">"Grâce à Lyak-Études, j'ai pu décrocher une alternance dans une grande entreprise. Merci pour tout!"</p>
                     <div class="student-info" id="">
-                        <img src="path_to_image" alt="Photo">
+                        <img src="./logo image/etudiant/temo1.jpg" alt="Photo">
                         <div class="student-name" id="">Sophie Martin</div>
                         <div class="student-course" id="">Informatique</div>
                     </div>
@@ -236,7 +289,7 @@
                 <div class="testimonial" id="">
                     <p class="" id="">"J'ai découvert Lyak-Études par hasard et cela a changé ma vie professionnelle. Je recommande fortement!"</p>
                     <div class="student-info" id="">
-                        <img src="path_to_image" alt="Photo">
+                        <img src="./logo image/etudiant/temo2.jpg" alt="Photo">
                         <div class="student-name" id="">Pierre Durand</div>
                         <div class="student-course" id="">Architecture d'intérieur</div>
                     </div>
@@ -253,6 +306,34 @@
         <a href="conditions.html">Conditions d'utilisation &nbsp;</a>
         <a href="confidentialite.html">Politique de confidentialité</a>
     </footer> 
+
+    <script>
+        function ouvrirPage() {
+            var a = document.getElementById("searchInput").value;
+
+            if (a === "offres") {
+                window.open("./offres.html");
+            }
+
+            if (a === "etudiant") {
+                window.open("./profiletudiant.html");
+            }
+
+            if (a === "actualite") {
+                window.open("./actualite-entreprises.html");
+            }
+
+            if (a === "connexion") {
+                window.open("./connexion.html");
+            }
+            if (a === "entreprise") {
+                window.open("./profil-entreprise.html");
+            }
+
+        }
+    </script>
+
+    <script src="./accueil.js"></script>
     
 </body>
 </html>

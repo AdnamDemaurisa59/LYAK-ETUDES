@@ -5,11 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offres de stages et alternances - LYAK-ETUDES</title>
     <link rel="stylesheet" href="offres.css">
+    <style>
+        .offer-group { padding: 20px; }
+        .offers-container { display: flex; flex-wrap: wrap; }
+        .offer { border: 1px solid #ddd; padding: 10px; margin: 10px; width: 300px; }
+        .offer-title { font-size: 18px; font-weight: bold; }
+        .offer-description { font-size: 14px; }
+        .offer-more, .apply-button { margin-top: 10px; display: block; }
+    </style>
 </head>
 <body>
 
     <header>
-        <a href="accueil.html"><h1>LYAK-ETUDES</h1></a>
+        <a href="./accueil.html"><h1>LYAK-ETUDES</h1></a>
+        <nav>
+                <li>
+                    <a href="./accueil.html">Accueil</a>
+                    <!-- Liste déroulante pour la rubrique Boite à outil -->
+                    <ul>
+                        <li><a href="./actualite-entreprises.html">Actualité Marché de l'emploi</a></li>
+                        <li><a href="./confidentialite.html">Confidentialité</a></li>
+                        <li><a href="./conditions.html">Condition</a></li>
+                        <li><a href="./rubrique.html">Boite à Outil</a></li>
+                        <li><a href="./contacteznous.html">Contactez-nous</a></li>
+                        <li><a href="./aproposdenous.html">A propos de nous</a></li>
+                        <!-- Ajoutez d'autres liens pour la boite à outils -->
+                    </ul>
+                </li>         
+                <li>
+                    <a href="">Entreprise</a>       
+                    <ul>
+                        <li><a href="./inscription-pro.html">Vous souhaitez nous rejoindre ?</a></li>
+                        <li><a href="./actualite-entreprises.html">Actualités des entreprises</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Inscrivez-vous</a>       
+                    <ul>
+                        <li><a href="./inscription.php">Vous êtes un étudiant ?</a></li>
+                        <li><a href="./inscription-pro.html">Vous êtes un professionnel ?</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Connectez-vous</a>       
+                    <ul>
+                        <li><a href="./connexion.html">Vous êtes un étudiant ?</a></li>
+                        <li><a href="./connexion-pro.html">Vous êtes un professionnel ?</a></li>
+                    </ul>
+                </li>
+        </nav>
     </header>
 
     <main>
@@ -59,6 +103,34 @@
             </div>
         </section>
 
+
+        <section class="offer-group1">
+            <div class="last-offer1">
+                <h3>Découvrez l'ensemble de nos offres</h3>
+            </div>
+            <div id="offers-container1" class="offers-container1">
+                <!-- Les offres seront insérées ici par JavaScript -->
+                <div class="offer1">
+                    <div class="offer-details1">
+                        <a href="#" class="offer-domain1">${offre.domaine}</a>
+                        <h2 class="offer-title1">${offre.titre}</h2>
+                        <p class="offer-description1">${offre.description}</p>
+                        <a href="#" class="offer-more1">En savoir plus</a>
+                        <button class="apply-button1">Postuler</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="offer-group">
+            <div class="last-offer">
+                <h3>Découvrez l'ensemble de nos offres</h3>
+            </div>
+            <div id="offers-container" class="offers-container">
+                <!-- Les offres seront insérées ici par JavaScript -->
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -86,8 +158,49 @@
         });
     </script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src=""></script>
+
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Document is ready');
+            fetch('https://www.welcometothejungle.com/api/v1/jobs')
+                .then(response => {
+                    console.log('API response received:', response);
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Data received:', datéa);
+                    const offersContainer = document.getElementById('offers-container');
+                    // Filtrer les offres pour inclure uniquement celles de développeur web
+                    const filteredJobs = data.jobs.filter(job => 
+                        job.title.toLowerCase().includes('développeur web') || 
+                        job.title.toLowerCase().includes('web developer')
+                    );
         
+                    console.log('Filtered jobs:', filteredJobs);
+        
+                    if (filteredJobs.length > 0) {
+                        filteredJobs.forEach(job => {
+                            const offerElement = document.createElement('div');
+                            offerElement.className = 'offer';
+                            offerElement.innerHTML = `
+                                <div class="offer-details">
+                                    <a href="#" class="offer-domain">${job.category.name}</a>
+                                    <h2 class="offer-title">${job.title}</h2>
+                                    <p class="offer-description">${job.description}</p>
+                                    <a href="${job.apply_url}" class="offer-more">En savoir plus</a>
+                                    <button class="apply-button">Postuler</button>
+                                </div>
+                            `;
+                            offersContainer.appendChild(offerElement);
+                        });
+                    } else {
+                        offersContainer.innerHTML = '<p>Aucune offre de développeur web trouvée.</p>';
+                    }
+                })
+                .catch(error => console.error('Error fetching offers:', error));
+        });
     </script>
     
 </body>

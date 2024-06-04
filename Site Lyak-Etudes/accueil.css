@@ -110,7 +110,7 @@ main {
     margin-bottom: 20px;
 }
 
-.search-bar {
+.searchBar {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
@@ -118,7 +118,7 @@ main {
     overflow: hidden;
 }
 
-.search-bar input {
+.searchBar input {
     flex: 1;
     padding: 10px;
     border: none;
@@ -337,6 +337,21 @@ main {
     font-size: 0.9em;
 }
 
+
+
+.find-offer-list img  {
+    width: 200px;
+    height: 200px;
+    padding: 1px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+
+
+
+
+
 .profile-group {
     background-color: #f9f9f9; /* Couleur de fond douce */
     padding: 20px;
@@ -502,14 +517,14 @@ main {
     color: #666;
 }
 
-.find-offer-list img  {
-    width: 200px;
-    height: 200px;
-    padding: 1px;
-    border: 1px solid #000;
-    border-radius: 20px;
+#suggestions {
+    font-size: 20px;
 }
 
+#suggestions:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
 
 footer {
     background-color:  #395C9F;

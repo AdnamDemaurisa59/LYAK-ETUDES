@@ -7,20 +7,73 @@ body {
     color: #333;
 }
 
+
+
 header {
     background-color: #395C9F;
-    padding: 15px;
+    padding: 5px;
     display: flex;
- 
+    align-items: center; 
+    justify-content: space-between; 
+    position: sticky;
+    top: 0px;
 }
 
 header a {
     text-decoration: none;
-    color: white;
 }
 
-h1 {
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    margin-right: 20px; /* Ajoute un espacement à droite pour chaque lien (ajustez selon vos besoins) */
+    font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white; 
+    
+}
+
+ /* Style pour la liste déroulante */
+ nav ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
+    display: none; /* Masquer la liste déroulante par défaut */
+    position: absolute;
+    background-color: black;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+
+}
+
+nav li:hover ul {
+    display: block; /* Afficher la liste déroulante au survol */
+}
+
+nav ul li {
+    display: block;
+}
+
+nav ul a {
+    padding: 10px;
+    display: block;
+}
+
+header h1 {
+    margin: 15px;
+    color: #fff;
 }
 
 .main-header {
@@ -140,4 +193,79 @@ footer a {
 
 footer a:hover {
     border-bottom: 2px solid white;
+}
+
+
+
+.offer-group1 {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.offers-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.offer1 {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.offer1:hover {
+    transform: translateY(-5px);
+}
+
+.offer-details1 {
+    text-align: center;
+}
+
+.offer-domain1 {
+    color: #395C9F;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.offer-title1 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.offer-description1 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.offer-more1, .apply-button1 {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #395C9F;
+    font-weight: bold;
+}
+
+.apply-button1 {
+    background-color: #395C9F;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button1:hover {
+    background-color: #2c4680;
 }

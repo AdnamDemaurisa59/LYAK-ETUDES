@@ -1,45 +1,98 @@
-// Récupérer les éléments du chat
 
-var chatButton = document.getElementById('chatButton');
-var chatBox = document.getElementById('chatBox');
-var closeChat = document.getElementById('closeChat');
-var messageInput = document.getElementById('messageInput');
-var sendMessageButton = document.getElementById('sendMessage');
-var chatMessages = document.getElementById('chatMessages');
+const offres = [
+    { name: 'Stage developpeur front-end', url: 'https://www.hellowork.com/fr-fr/emplois/46760950.html' },
+    { name: 'Stage developpeur back-end' },
+    { name: 'Stage developpeur full-stack' },
+    { name: 'Stage Ui Design' },
+    { name: 'Stage Ux Design' },
+    { name: 'Stage Product Designer' },
+    { name: 'Stage Cadreur' },
+    { name: 'Stage Cadreuse' },
+    { name: 'Stage Chargé/Chargée de production.'},
+    { name: 'Stage Product Owner' },
+    { name: 'Stage Product Manager' },
+    { name: 'Stage Architecte' },
+    { name: 'Stage Architecte Interieur' },
+    { name: 'Stage Ingénieur cybersécurité' },
+    { name: 'Stage Architecte Cybersécurité' },
+    { name: 'Stage Graphiste' },
+    { name: 'Stage Game Designer' },
+    { name: 'Stage Chargé/Chargée d"études en marketing' },
+    { name: 'Stage Chef/Cheffe de produit marketing.' },
+    { name: 'Stage Data manager' },
+    { name: 'Stage Chargé/Chargée d"études média' },
 
-// Afficher ou masquer la fenêtre de chat
-chatButton.addEventListener('click', toggleChat);
-closeChat.addEventListener('click', toggleChat);
+    { name: 'Alternance developpeur front-end' },
+    { name: 'Alternance developpeur back-end' },
+    { name: 'Alternance developpeur full-stack' },
+    { name: 'Alternance Ui Design' },
+    { name: 'Alternance Ux Design' },
+    { name: 'Alternance Product Designer' },
+    { name: 'Alternance Cadreur' },
+    { name: 'Alternance Cadreuse' },
+    { name: 'Alternance Chargé/Chargée de production.'},
+    { name: 'Alternance Product Owner' },
+    { name: 'Alternance Product Manager' },
+    { name: 'Alternance Architecte' },
+    { name: 'Alternance Architecte Interieur' },
+    { name: 'Alternance Ingénieur cybersécurité' },
+    { name: 'Alternance Architecte Cybersécurité' },
+    { name: 'Alternance Graphiste' },
+    { name: 'Alternance Game Designer' },
+    { name: 'Alternance Chargé/Chargée d"études en marketing' },
+    { name: 'Alternance Chef/Cheffe de produit marketing.' },
+    { name: 'Alternance Data manager' },
+    { name: 'Alternance Chargé/Chargée d"études média' }
+];
 
-function toggleChat() {
-    chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
-}
 
-// Envoyer un message
-sendMessageButton.addEventListener('click', sendMessage);
+const searchInput = document.getElementById('searchInput');
+const suggestions = document.getElementById('suggestions');
+const searchIcon = document.querySelector('.icon-loupe');
 
-function sendMessage() {
-    var message = messageInput.value.trim();
-    if (message !== '') {
-        var messageElement = document.createElement('div');
-        messageElement.textContent = message;
-        chatMessages.appendChild(messageElement);
-        messageInput.value = '';
+
+
+
+searchInput.addEventListener('keyup', function() {
+    const input = searchInput.value.toLowerCase();
+
+    const result = offres.filter(items => items.name.toLowerCase().includes(input));
+
+    let suggestions = '';
+    
+
+    if(input !== '') {
+        result.forEach(resultItem => {
+            suggestions += `<div class="suggestions" onclick="insertSuggestion('${resultItem.name}')">${resultItem.name}</div>`;
+        });
+    }
+    
+    document.getElementById('suggestions').innerHTML = suggestions;
+
+    suggestions.innerHTML = suggestionsList;
+
+});
+
+searchInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        redirectToOfferPage();
+    }
+});
+
+searchIcon.addEventListener('click', function() {
+    redirectToOfferPage();
+});
+
+function redirectToOfferPage() {
+    const selectedSuggestion = offres.find(offre => offre.name === searchInput.value);
+    if (selectedSuggestion && selectedSuggestion.url) {
+        window.open(selectedSuggestion.url, '_blank');
     }
 }
-console.log("Hello, world!");
+
+function insertSuggestion(suggestion, url) {
+    searchInput.value = suggestion;
+    suggestions.innerHTML = '';
+}
 
 
-document.getElementById('chatButton').addEventListener('click', function() {
-    document.getElementById('chatBox').style.display = 'block';
-});
-
-document.getElementById('closeChat').addEventListener('click', function() {
-    document.getElementById('chatBox').style.display = 'none';
-});
-
- // Afficher ou masquer la bulle de messagerie au clic sur le bouton
- document.getElementById('chatButton').addEventListener('click', function () {
-    var chatBubble = document.getElementById('chatBubble');
-    chatBubble.style.display = (chatBubble.style.display === 'block') ? 'none' : 'block';
-});
