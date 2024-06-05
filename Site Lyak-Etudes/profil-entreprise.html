@@ -11,10 +11,6 @@
 
     <header>
         <h1>LYAK-ETUDES</h1>
-        <div class="search-bar" id="">
-            <input type="text" placeholder="Rechercher des opportunités">
-            <button type="button">Rechercher</button> 
-        </div>
         <nav class="" id="">
             <a href="./accueil.html">Accueil</a>
             <a href="./profils-etudiants.html">Profil Etudiant</a>
@@ -24,10 +20,13 @@
     <main>
         <section class="first-presentation">
             <div class="logo-entreprise" id="">
-                <img src="./logo image/image9.jpeg" alt="Image Couverture Entreprise">
+                <img src="" alt="">
             </div>
             <div class="name-entreprise" id="">
-                <img src="" alt="Logo Entreprise" class="">
+                <input type="file" id="fileInput" accept="image/*">
+                <div class="entreprisePhoto">
+                    <img src="" alt="" id="entreprisePhoto">
+                </div>
                 <h2 class="" id="">Nom Entreprise</h2>
                 <a href="" class="" >Voir notre site</a>
                 <div class="logo-linkedin">
@@ -94,6 +93,48 @@
         <a href="conditions.html">Conditions d'utilisation &nbsp;</a>
         <a href="confidentialite.html">Politique de confidentialité</a>
     </footer> 
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('entreprisePhoto').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('uploadButton').addEventListener('click', function() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const formData = new FormData();
+                formData.append('photo', file);
+
+                fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Photo téléchargée avec succès');
+                    } else {
+                        alert('Erreur lors du téléchargement de la photo');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                    alert('Erreur lors du téléchargement de la photo');
+                });
+            } else {
+                alert('Veuillez sélectionner une photo');
+            }
+        });
+    </script>
     
 </body>
 </html>

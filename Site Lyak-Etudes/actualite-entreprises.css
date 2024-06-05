@@ -72,6 +72,10 @@ main {
     margin: 0 auto;
 }
 
+.articles a {
+    text-decoration: none;
+}
+
 .month {
     margin-bottom: 40px;
 }
