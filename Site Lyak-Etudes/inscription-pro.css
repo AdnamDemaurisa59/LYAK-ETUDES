@@ -85,10 +85,68 @@ button {
 }
 
 
-article a {
+.connexion a {
     color:  #395C9F;
 }
 
+
+.mdp {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mdp input {
+    width: 100%;
+    padding-right: 30px; /* Ajoutez un peu d'espace pour l'icône */
+}
+
+.mdp i {
+    position: absolute;
+    right: 10px; /* Ajustez la position de l'icône */
+    cursor: pointer;
+    bottom: 28px;
+}
+
+.mdp i.active::before {
+    content: '\f070';
+    color: rgba(0, 0, 0, 0.734);
+}
+
+
+
+.mdp1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mdp1 input {
+    width: 100%;
+    padding-right: 30px; /* Ajoutez un peu d'espace pour l'icône */
+}
+
+.mdp1 i {
+    position: absolute;
+    right: 10px; /* Ajustez la position de l'icône */
+    cursor: pointer;
+    bottom: 28px;
+}
+
+.mdp1 i.active::before {
+    content: '\f070';
+    color: rgba(0, 0, 0, 0.734);
+}
 
 @media screen and (min-width: 768px) {
 

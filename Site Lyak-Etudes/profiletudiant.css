@@ -73,34 +73,6 @@ header h1 {
     color: #fff;
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;    
-    border-radius: 10px;
-    border-radius: 3em;
-}
-
-.search-bar input {
-    border-radius: 5px 0 0 5px;
-    border:solid 2px #fff;
-    box-sizing:border-box;
-
-    transition:all 2s ease-in;
-    width:200px;
-    height: 30px;
-}
-
-.search-bar button {
-    color: black;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    width: 150px;
-
-    border:solid 2px #3e5e80;
-    border-radius: 5px 0 0 5px;
-    padding:7px;
-}
-
 main {
     max-width: 1200px;
     margin: 0 auto;

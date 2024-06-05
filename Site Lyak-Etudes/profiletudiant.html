@@ -18,21 +18,18 @@
         <div class="" id="">
             <a href="accueil.html"><h1>LYAK-ETUDES</h1> </a>
         </div>
-        <div class="search-bar" id="">
-            <input type="text" placeholder="Rechercher des opportunités">
-            <button type="button">Rechercher</button>   
-        </div>
         <nav>
                 <li>
                     <a href="./accueil.html">Accueil</a>
                     <!-- Liste déroulante pour la rubrique Boite à outil -->
                     <ul>
                         <li><a href="./actualite-entreprises.html">Actualité Marché de l'emploi</a></li>
+                        <li><a href="./offres.html">Nos Offres</a></li>
                         <li><a href="./communaute.html">Communauté</a></li>
                         <li><a href="./forum.html">Forum</a></li>
-                        <li><a href="#">Contactez-nous</a></li>
-                        <li><a href="#">A propos de nous</a></li>
-                        <li><a href="#">Boite à Outil</a></li>
+                        <li><a href="./contacteznous.html">Contactez-nous</a></li>
+                        <li><a href="./aproposdenous.html">A propos de nous</a></li>
+                        <li><a href="./rubrique.html">Boite à Outil</a></li>
                         <!-- Ajoutez d'autres liens pour la boite à outils -->
                     </ul>
                 </li>
@@ -54,7 +51,6 @@
                         <li><a href="./parametresprofil.html">Paramètres Profil</a></li>
                         <li><a href="./gestion-moncompte.html">Gestion Compte</a></li>
                         <li><a href="./tableaubord.html">Tableau de Bord</a></li>
-                        <li><a href="#" alt="">Mes notes de stages</a></li>
                         <li><a href="./modifier-profil.html">Modification Profil</a></li>
                         <li><a href="./disponibilite.html">Mes disponibilités</a></li>
                     </ul>
@@ -329,18 +325,6 @@
         });
     </script>
 
-    <script>
-        document.getElementById('fileInput').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('studentPhoto').src = e.target.result;
-                }
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
 
     <script>
         document.getElementById('fileInput').addEventListener('change', function(event) {

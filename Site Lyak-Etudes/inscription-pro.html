@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription Entreprise</title>
     <link rel="stylesheet" href="inscription-pro.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
 
@@ -27,19 +32,60 @@
             <label for="email">Adresse Email</label>
             <input type="email" id="email" name="email" placeholder="Renseigner l'adresse mail de votre entreprise" autocomplete="on">
 
-            <label for="password">Mot de Passe</label>
-            <input type="password" id="password" name="password" placeholder="Choisissez votre mot de passe" autocomplete="off" maxlength="16" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" title="Le mot de passe doit contenir au moins 6 caractères, dont une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial (@,$,!,%,*,?,&). - Le mot de passe ne doit pas dépasser 16 caractères.">
+            <div class="mdp">
+                <label for="password">Confirmer votre Mot de Passe</label>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" placeholder="Confirmez votre mot de passe" autocomplete="off" maxlength="16" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" title="Le mot de passe doit contenir au moins 6 caractères, dont une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial (@,$,!,%,*,?,&). - Le mot de passe ne doit pas dépasser 16 caractères.">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+            </div>
 
-            <label for="password1">Confirmer votre Mot de Passe</label>
-            <input type="password" id="password1" name="password1" placeholder="Confirmez votre mot de passe" autocomplete="off" maxlength="16" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" title="Le mot de passe doit contenir au moins 6 caractères, dont une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial (@,$,!,%,*,?,&). - Le mot de passe ne doit pas dépasser 16 caractères.">
+            <div class="mdp1">
+                <label for="password1">Confirmer votre Mot de Passe</label>
+                <div class="input-container1">
+                    <input type="password" id="password1" name="password1" placeholder="Confirmez votre mot de passe" autocomplete="off" maxlength="16" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" title="Le mot de passe doit contenir au moins 6 caractères, dont une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial (@,$,!,%,*,?,&). - Le mot de passe ne doit pas dépasser 16 caractères.">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+            </div>
 
             <button type="submit">S'inscrire</button>
         </form>
-        <article>
-            <p>Déjà inscrit ?<a href="connexion-pro.html">Connectez-vous ici</a>.</p>
-        </article>
+        <div class="connexion">
+            <p>Déjà inscrit ?<a href="./connexion-pro.html">Connectez-vous ici</a>.</p>
+        </div>
     </div>
 </main>
+
+    <script>
+        let input = document.querySelector('.mdp input');
+        let showBtn = document.querySelector('.mdp i');
+        showBtn.onclick = function() {
+            if(input.type === "password") {
+               input.type = "text";
+               showBtn.classList.add('active');
+            } else {
+                input.type = "password";
+                showBtn.classList.remove('active');
+            }
+
+        }
+
+        let input1 = document.querySelector('.mdp1 input');
+        let showBtn1 = document.querySelector('.mdp1 i');
+        showBtn1.onclick = function() {
+            if(input1.type === "password") {
+                input1.type = "text";
+                showBtn1.classList.add('active');
+            } else {
+                input1.type = "password";
+                showBtn1.classList.remove('active');
+            }
+    }
+    </script>
+
+    <script>
+        
+    </script>
 
 </body>
 </html>

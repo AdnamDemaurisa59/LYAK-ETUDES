@@ -269,3 +269,25 @@ footer a:hover {
 .apply-button1:hover {
     background-color: #2c4680;
 }
+
+
+
+#suggestions {
+    font-size: 20px;
+    width:400px;
+    height: 100px;
+    overflow: auto; 
+    cursor: pointer;
+    margin-left: 475px;
+}
+
+#suggestions:hover {
+    background-color: cornflowerblue;
+    color: white;
+    width:400px;
+    height: 80px;
+    margin-left: 475px;
+    overflow: auto; 
+    cursor: pointer;
+    border: 1px solid black;
+}

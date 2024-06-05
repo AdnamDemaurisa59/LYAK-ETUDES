@@ -60,9 +60,10 @@
         <div class="main-header">
             <h3>Trouvez votre prochaine opportunité</h3>
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Rechercher un stage ou une alternance">
-                <button id="searchButton">Rechercher</button>
+                <input type="text" class="search" id="searchInput" placeholder="Rechercher un stage ou une alternance">
+                <button class="searchButton" id="searchButton">Rechercher</button>
             </div>
+            <div id="suggestions"></div>
         </div>
 
         <section class="offer-group">
@@ -73,50 +74,34 @@
                 <!-- Offer 1 -->
                 <div class="offer">
                     <div class="offer-details">
-                        <a href="#" class="offer-domain">Informatique</a>
-                        <h2 class="offer-title">Développeur Web</h2>
+                        <img src="" alt="">
+                        <a href="#" class="offer-domain">Louis Dreyfus TravOcean</a>
+                        <h2 class="offer-title">Stage Développeur Front-End</h2>
                         <p class="offer-description">Rejoignez notre équipe pour développer des applications web innovantes.</p>
-                        <a href="#" class="offer-more">En savoir plus</a>
-                        <button class="apply-button">Postuler</button>
+                        <a href="https://www.hellowork.com/fr-fr/emplois/51234178.html" class="offer-more" target="_blank">En savoir plus</a>
+                        <button class="apply-button">Cliquer sur "En savoir plus" pour postuler</button>
                     </div>
                 </div>
                 <!-- Offer 2 -->
                 <div class="offer">
                     <div class="offer-details">
-                        <a href="#" class="offer-domain">Marketing & Communication</a>
-                        <h2 class="offer-title">Community Manager</h2>
+                        <img src="" alt="">
+                        <a href="#" class="offer-domain">Transgourmet</a>
+                        <h2 class="offer-title">Alternance Community Manager</h2>
                         <p class="offer-description">Participez à la gestion de notre communauté en ligne et à la création de contenu.</p>
-                        <a href="#" class="offer-more">En savoir plus</a>
-                        <button class="apply-button">Postuler</button>
+                        <a href="https://www.hellowork.com/fr-fr/emplois/48664840.html" class="offer-more" target="_blank">En savoir plus</a>
+                        <button class="apply-button">Cliquer sur "En savoir plus" pour postuler</button>
                     </div>
                 </div>
                 <!-- Offer 3 -->
                 <div class="offer">
                     <div class="offer-details">
-                        <a href="#" class="offer-domain">Création & Digital Design</a>
-                        <h2 class="offer-title">Graphiste</h2>
+                        <img src="" alt="">
+                        <a href="#" class="offer-domain">Intersport</a>
+                        <h2 class="offer-title">Alternance Graphiste</h2>
                         <p class="offer-description">Contribuez à la conception graphique de nos projets créatifs.</p>
-                        <a href="#" class="offer-more">En savoir plus</a>
-                        <button class="apply-button">Postuler</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="offer-group1">
-            <div class="last-offer1">
-                <h3>Découvrez l'ensemble de nos offres</h3>
-            </div>
-            <div id="offers-container1" class="offers-container1">
-                <!-- Les offres seront insérées ici par JavaScript -->
-                <div class="offer1">
-                    <div class="offer-details1">
-                        <a href="#" class="offer-domain1">${offre.domaine}</a>
-                        <h2 class="offer-title1">${offre.titre}</h2>
-                        <p class="offer-description1">${offre.description}</p>
-                        <a href="#" class="offer-more1">En savoir plus</a>
-                        <button class="apply-button1">Postuler</button>
+                        <a href="https://www.hellowork.com/fr-fr/emplois/48616168.html" class="offer-more" target="_blank">En savoir plus</a>
+                        <button class="apply-button">Cliquer sur "En savoir plus" pour postuler</button>
                     </div>
                 </div>
             </div>
@@ -124,7 +109,7 @@
 
         <section class="offer-group">
             <div class="last-offer">
-                <h3>Découvrez l'ensemble de nos offres</h3>
+                <h3></h3>
             </div>
             <div id="offers-container" class="offers-container">
                 <!-- Les offres seront insérées ici par JavaScript -->
@@ -159,49 +144,9 @@
     </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src=""></script>
+    <script src="./offres.js"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Document is ready');
-            fetch('https://www.welcometothejungle.com/api/v1/jobs')
-                .then(response => {
-                    console.log('API response received:', response);
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Data received:', datéa);
-                    const offersContainer = document.getElementById('offers-container');
-                    // Filtrer les offres pour inclure uniquement celles de développeur web
-                    const filteredJobs = data.jobs.filter(job => 
-                        job.title.toLowerCase().includes('développeur web') || 
-                        job.title.toLowerCase().includes('web developer')
-                    );
-        
-                    console.log('Filtered jobs:', filteredJobs);
-        
-                    if (filteredJobs.length > 0) {
-                        filteredJobs.forEach(job => {
-                            const offerElement = document.createElement('div');
-                            offerElement.className = 'offer';
-                            offerElement.innerHTML = `
-                                <div class="offer-details">
-                                    <a href="#" class="offer-domain">${job.category.name}</a>
-                                    <h2 class="offer-title">${job.title}</h2>
-                                    <p class="offer-description">${job.description}</p>
-                                    <a href="${job.apply_url}" class="offer-more">En savoir plus</a>
-                                    <button class="apply-button">Postuler</button>
-                                </div>
-                            `;
-                            offersContainer.appendChild(offerElement);
-                        });
-                    } else {
-                        offersContainer.innerHTML = '<p>Aucune offre de développeur web trouvée.</p>';
-                    }
-                })
-                .catch(error => console.error('Error fetching offers:', error));
-        });
-    </script>
+    
     
 </body>
 </html>
